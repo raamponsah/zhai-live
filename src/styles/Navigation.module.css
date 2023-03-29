@@ -1,29 +1,68 @@
+
 .navigation {
     display: flex;
     justify-content: space-between;
-    background-color: rgba(250, 245, 226, 0.231);
+    background-color:var(--main);
     padding: 10px;
 }
 .navigation ul{
     color: white;
     display:flex;
     justify-content: space-between;
+    align-items: center;
+
 }
 
 .navigation ul li {
     list-style: none;
     padding: 10px;
+
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color:black
+}
+
+.navigation ul li a:hover {
+    color:var(--main);
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.navigation ul li a:active {
+    color:var(--main);
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.hamburger {
+    display: none;
+}
+
+
+.ctaButton {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 
 /* responsive navigation styles */
 
 @media screen and (max-width: 768px) {
-    .navigation {
-        flex-direction: column;
+    .hamburger{
+        display: block;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
     }
     .navigation ul {
-        flex-direction: column;
+        display: none;
     }
     .navigation ul li {
         padding: 10px 0;
