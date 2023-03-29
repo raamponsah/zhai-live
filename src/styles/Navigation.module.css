@@ -1,0 +1,16 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(250, 245, 226, 0.231);
+    padding: 10px;
+}
+.navigation ul{
+    color: white;
+    display:flex;
+    justify-content: space-between;
+}
+
+.navigation ul li {
+    list-style: none;
+    padding: 10px;
+}
