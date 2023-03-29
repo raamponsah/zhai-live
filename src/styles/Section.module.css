@@ -1,0 +1,51 @@
+.section{
+    display:flex;
+
+    justify-content: space-between;
+}
+
+.section .sectionText{
+    padding: 5rem;
+    width: 50%;
+    line-height: 1;
+    font-weight: 200;
+    line-height: 1.25;
+    background-color: #e52afa;
+    color:white;
+    font-size: 1.23rem;
+    
+}
+
+.section .sectionText h1{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.section .sectionText h3{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+.section .sectionText p{
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    line-height: 1.25;
+    font-weight: 200;
+}
+
+.section .sectionImage{
+    width: 50%;
+    position: relative;
+    position: unset !important;
+    /* display: block; */
+}
+
+.image {
+    object-fit: cover;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+  }

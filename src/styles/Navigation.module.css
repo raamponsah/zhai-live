@@ -4,13 +4,20 @@
     justify-content: space-evenly;
     align-items: center;
     background-color:var(--main);
-    padding: 10px;
+    padding: 20px 10px;
+}
+
+.navigation #logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navigation .logo {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1.65rem;
+    font-weight: 500;
     text-decoration: none;
+
 }
 .navigation ul{
     color: white;
@@ -62,11 +69,13 @@
 
 
 .ctaButton {
-    background-color: black;
+    background-color: var(--secondary);
     color: white;
     padding: 10px;
     border-radius: 5px;
     text-decoration: none;
+    outline: 1px solid var(--secondary);
+    outline-offset: 5px;
 }
 
 

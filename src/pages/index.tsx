@@ -1,7 +1,7 @@
-import HomeBanner from '@/components/HomeBanner'
-import Navigation from '@/components/Navigation'
-import Head from 'next/head'
-
+import HomeBanner from "@/components/HomeBanner";
+import Navigation from "@/components/Navigation";
+import Section from "@/components/Section";
+import Head from "next/head";
 
 export default function Home() {
   return (
@@ -13,11 +13,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-
         <Navigation></Navigation>
-        <HomeBanner/>
-    
+        <HomeBanner />
+        <Section
+          title="Breaking Barriers: Access to Education for All"
+          subtitle="Building a Brighter Future: Scholarships for African Students"
+          text="Access to Education for All is a ZHAI Foundation initiative aimed at increasing access to quality education across Africa. Through this program, ZHAI Foundation provides support to marginalized communities, including scholarships for deserving students who may not have the financial means to pursue their academic goals. The initiative is focused on breaking down barriers to education, ensuring that all African children have the opportunity to reach their full potential and create a brighter future for themselves and their communities."
+          image="/images/annie-spratt-feU8G7E5ODI-unsplash.jpg"
+        />
       </main>
     </>
-  )
+  );
 }
