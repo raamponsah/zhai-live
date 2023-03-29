@@ -14,3 +14,19 @@
     list-style: none;
     padding: 10px;
 }
+
+
+/* responsive navigation styles */
+
+@media screen and (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+    }
+    .navigation ul {
+        flex-direction: column;
+    }
+    .navigation ul li {
+        padding: 10px 0;
+    }
+    
+}
