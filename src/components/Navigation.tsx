@@ -27,7 +27,7 @@ const Navigation = () => {
   return (
     <>
       <nav className={styles.navigation}>
-        <h1>Zhai Foundation</h1>
+        <h1 className={styles.logo}>Zhai Foundation</h1>
         <ul>
           {navItems.map((item, index) => (
             <li key={index}>

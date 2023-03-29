@@ -1,12 +1,18 @@
 import styles from "@/styles/HomeBanner.module.css";
+import Image from "next/image";
 
 const HomeBanner = () => {
   return <div className={styles.homeBanner}>
     <div className={styles.homeBannerText}>
-        <h3 className={styles.homeBannerTitle}>Inspiring strong regenerative action
-for people and planet</h3>
-        {/* <p className={styles.homeBannerSubtitle}>A non-profit organization dedicated to the advancement of the arts and sciences.</p> */}
+        <h1>Empowering the next generation of leaders</h1>
+        <p>Our mission is to empower the next generation of leaders by providing them with the tools and resources they need to succeed.</p>
     </div>
+
+
+    <div className={styles.homeBannerImage}>
+        <Image src="/images/founder.jpeg" alt="home-banner" layout="fill" className={styles.image} />
+    </div>
+
   </div>;
 };
 

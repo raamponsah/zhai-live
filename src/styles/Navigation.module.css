@@ -1,15 +1,33 @@
 
 .navigation {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
     background-color:var(--main);
     padding: 10px;
+}
+
+.navigation .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
 }
 .navigation ul{
     color: white;
     display:flex;
     justify-content: space-between;
     align-items: center;
+    flex-grow: 2;
+    max-width: 500px;
+
+}
+
+.navigation .ctaButton{
+    flex-grow: 1;
+    max-width: 180px;
+    padding: 15px;
+    border-radius: 30px;
+    text-align: center;
 
 }
 
@@ -24,7 +42,7 @@
     color:black
 }
 
-.navigation ul li a:hover {
+/* .navigation ul li a:hover {
     color:var(--main);
     background-color: black;
     padding: 5px;
@@ -36,7 +54,7 @@
     background-color: black;
     padding: 5px;
     border-radius: 5px;
-}
+} */
 
 .hamburger {
     display: none;

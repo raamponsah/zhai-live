@@ -1,6 +1,7 @@
 
 :root{
-  --main:#f7f6ff
+  --main:#fff;
+  --secondary:#752afa;
 }
 *{
   margin:0;
