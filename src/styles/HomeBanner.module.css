@@ -1,13 +1,30 @@
 .homeBanner{
     display: flex;
     justify-content: space-between;
-    background:var(--secondary)
+    background:var(--secondary);
+    max-height: 700px;
+    overflow: hidden;
+
 }
 
 .homeBannerText{
     color:aliceblue;
-    padding: 4.5rem;
+    padding: 12rem;
     width: 50%;
+    line-height: 1;
+
+}
+
+.homeBannerText h1{
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.homeBannerText p{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
 }
 
 .homeBannerImage{
