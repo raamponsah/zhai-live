@@ -1,0 +1,38 @@
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;;
+    background-color: rgb(230, 246, 248);
+
+
+}
+
+.section div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    max-width: 800px;
+    text-align: center;
+
+}
+
+.section h4{
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-align: center;
+
+}
+
+.section p{
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    text-align: center;
+    line-height: 1.25;
+
+}

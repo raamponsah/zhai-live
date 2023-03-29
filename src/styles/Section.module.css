@@ -1,51 +1,62 @@
+
 .section{
     display:flex;
-
     justify-content: space-between;
+    align-items: center;
+    background-color: blueviolet;
+    color: white;
+    position: relative;
+ 
+}
+.sectionText{
+    padding:0 4rem;
 }
 
-.section .sectionText{
-    padding: 5rem;
-    width: 50%;
-    line-height: 1;
-    font-weight: 200;
-    line-height: 1.25;
-    background-color: #e52afa;
-    color:white;
-    font-size: 1.23rem;
-    
-}
-
-.section .sectionText h1{
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-.section .sectionText h3{
+.sectionText h3{
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    line-height: 1.2;
-    font-weight: 400;
+    font-weight: 300;
 }
 
-.section .sectionText p{
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    line-height: 1.25;
+.sectionText p{
+    font-size: 1.2rem;
     font-weight: 200;
+    line-height: 1.25;
+}
+.sectionText h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
-.section .sectionImage{
-    width: 50%;
+
+div.sectionImage{
     position: relative;
-    position: unset !important;
-    /* display: block; */
+    min-width: 50%;
+    min-height: calc(70vh - 100px);
+
+  
 }
 
-.image {
-    object-fit: cover;
-    width: 100% !important;
-    position: relative !important;
-    height: unset !important;
-  }
+div.sectionImage .image{
+    min-width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+ 
+
+
+
+@media only screen and (max-width: 768px) {
+    .section{
+        flex-direction: column;
+        padding: 1rem;
+    }
+    div.sectionImage{
+        position: relative;
+        min-width: 100vw;
+        min-height: calc(50vh - 100px);
+      
+    }
+}
+
+

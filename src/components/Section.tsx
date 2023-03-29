@@ -5,28 +5,25 @@ type SectionProps = {
   subtitle: string;
   text: string;
   image: string;
-  swapped?: boolean;
+  direction?: string;
 };
 
-const Section = ({ title, subtitle, text, image }: SectionProps) => {
+const Section = ({ title, subtitle, text, image, direction }: SectionProps) => {
   return (
-    <section className={styles.section} style={{flexDirection:'row-reverse'}}>
+    <section className={styles.section}>
+      <div className={styles.sectionImage}>
+        <Image alt="" fill src={image} />
+
+      </div>
+
       <div className={styles.sectionText}>
         <h1>{title}</h1>
         <h3>{subtitle}</h3>
         <p>
           {text}
         </p>
-      </div>
 
-      <div className={styles.sectionImage}>
-        <Image
-          src={image}
-          alt={title}
-          width={500}
-          height={500}
-          className={styles.image}
-        />
+
       </div>
     </section>
   );
