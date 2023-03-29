@@ -1,0 +1,35 @@
+.homeBanner{
+    /* background-image: url(../images/home-banner.jpg); */
+    background:#f7f6f0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.homeBannerText{
+    margin: auto;
+    /* padding: 0 20px; */
+    max-width: 900px;
+    line-height: 1.6;
+}
+.homeBannerTitle{
+    padding: 20px 0;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    
+
+}
+
+.homeBannerSubtitle{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}

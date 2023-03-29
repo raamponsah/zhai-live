@@ -1,3 +1,4 @@
+import HomeBanner from '@/components/HomeBanner'
 import Navigation from '@/components/Navigation'
 import Head from 'next/head'
 
@@ -14,6 +15,7 @@ export default function Home() {
       <main>
 
         <Navigation></Navigation>
+        <HomeBanner/>
     
       </main>
     </>
