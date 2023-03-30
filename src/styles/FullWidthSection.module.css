@@ -3,19 +3,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5rem;;
-    background-color: rgb(230, 246, 248);
-
-
+    padding: 5rem;
+    background-color: var(--tertiary);
+    min-width: 100%;
 }
 
-.section div:nth-child(1){
+.section div.textDisplay{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 5rem;
-    max-width: 800px;
+    max-width: 1000px;
     text-align: center;
 
 }
@@ -32,7 +31,46 @@
     font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 1rem;
-    text-align: center;
     line-height: 1.25;
+
+}
+
+ .section div.icons{
+    display: flex;
+    max-width: 1500px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+
+    
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    .section{
+      padding: 0;
+      margin: 0;
+    
+    }
+
+    .section h4{
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+        text-align: center;
+    
+    }
+
+    .section p{
+        font-size: 1rem;
+        font-weight: 300;
+        margin-bottom: 1rem;
+        line-height: 1.25;
+    
+    }
 
 }

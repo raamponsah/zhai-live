@@ -13,6 +13,7 @@ const Section = ({ title, subtitle, text, image, direction }: SectionProps) => {
     <section className={styles.section}>
       <div className={styles.sectionImage}>
         <Image alt="" fill src={image} />
+        
 
       </div>
 

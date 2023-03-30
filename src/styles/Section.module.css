@@ -3,13 +3,13 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
-    background-color: blueviolet;
+    background-color: var(--quaternary);
     color: white;
     position: relative;
  
 }
 .sectionText{
-    padding:0 4rem;
+    padding:2rem 4rem;
 }
 
 .sectionText h3{
@@ -54,9 +54,15 @@ div.sectionImage .image{
     div.sectionImage{
         position: relative;
         min-width: 100vw;
-        min-height: calc(50vh - 100px);
+        min-height: calc(40vh - 100px);
       
     }
+
+    .sectionText{
+        margin: 2rem 0;;
+        padding:0 1rem;
+    }
+    
 }
 
 

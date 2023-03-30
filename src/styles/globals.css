@@ -2,9 +2,15 @@
 :root{
   --main:#fff;
   --secondary:#752afa;
+  --tertiary:rgb(149 232 204);
+  --quaternary:#2e0d68;
 }
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
+}
+
+html,body{
+  min-width: 100%;
 }

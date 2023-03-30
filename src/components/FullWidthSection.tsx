@@ -1,23 +1,34 @@
-import styles from '@/styles/FullWidthSection.module.css'
+import styles from "@/styles/FullWidthSection.module.css";
+import IconTextComponent from "./IconTextComponent";
+import { ReactElement } from "react";
 
-const FullWidthSection = () => {
+const FullWidthSection = ({
+  title,
+  subphrase,
+  component,
+  bgColor,
+  iconSet,
+}: {
+  title?: string;
+  subphrase?: string;
+  component?: ReactElement;
+  bgColor?: string;
+  iconSet?: ReactElement[];
+}) => {
   return (
-    <section className={styles.section}>
-        <div>
-        <h4>Do you own, manage, or work for an organization?</h4>
-        <p>
-        Searching for guidance on climate action, sustainability, regenerative supply chains, or credible verification? Become a member of Pond Foundation, and we will support you with:
+    <section className={styles.section} style={{ background: bgColor }}>
+      <div className={styles.textDisplay}>
+        <h4>{title}</h4>
+        <p>{subphrase}</p>
+      </div>
 
-        </p>
-
-        <div>
-
-        </div>
-        </div>
+      <div className={styles.icons}>{component}</div>
+      <div className={styles.icons}>{iconSet?.map((iconText, i)=>{
+        return <IconTextComponent key={i} title={iconText.props.title} icon={iconText.props.icon} text={iconText.props.text} />
+      })
+    }</div>
     </section>
-  )
-}
+  );
+};
 
-
-
-export default FullWidthSection
+export default FullWidthSection;
