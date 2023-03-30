@@ -1,7 +1,8 @@
 import { ReactElement } from "react";
+import { JsxElement } from "typescript";
 
-const Icon = ({ icon }: { icon: ReactElement }) => {
-  return <>{icon}</>;
+const Icon = ({ component }: { component: ReactElement }) => {
+  return <>{component}</>;
 };
 
 export default Icon;

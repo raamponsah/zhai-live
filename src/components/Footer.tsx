@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "@/styles/Navigation.module.css";
 import Image from "next/image";
+import SocialLinks from "./SocialLinks";
 const navItems = [
   {
     name: "Initiatives",
@@ -29,8 +30,13 @@ const FooterNav = () => {
     <>
       <nav className={styles.navigation}>
         <div id={styles.logo}>
-        <Image width={64} height={64} alt='zhai-logo' src='/images/zhai-logo.png' />
-        <h1 className={styles.logo}>Zhai Foundation</h1>
+          <Image
+            width={64}
+            height={64}
+            alt="zhai-logo"
+            src="/images/zhai-logo.png"
+          />
+          <h1 className={styles.logo}>Zhai Foundation</h1>
         </div>
         <ul>
           {navItems.map((item, index) => (
@@ -40,7 +46,12 @@ const FooterNav = () => {
           ))}
         </ul>
 
-        <div className={styles.hamburger} onClick={()=>{console.log('clicked')}}>
+        <div
+          className={styles.hamburger}
+          onClick={() => {
+            console.log("clicked");
+          }}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 14 14"
@@ -82,11 +93,9 @@ const FooterNav = () => {
           </svg>
         </div>
 
-        <Link href="" className={styles.ctaButton}>
-          <span>Donate</span>
-        </Link>
+    
+        <SocialLinks />
 
-      
       </nav>
     </>
   );

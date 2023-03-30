@@ -1,0 +1,43 @@
+.imageBox{
+    width: 200px;
+    height: 200px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+.textBox{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+.textBox h1{
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.textBox h2{
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.textBox p{
+    font-size: 1rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+    line-height: 1.25;
+}
