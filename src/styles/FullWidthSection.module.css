@@ -45,6 +45,7 @@
  .section div.icons{
     display: flex;
     max-width: 1500px;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -80,10 +81,3 @@
 }
 
 
-.profiles{
-    display: flex;
-    flex-direction: column;
-    padding: 5rem;
-    background-color: var(--tertiary);
-    min-width: 100%;
-}

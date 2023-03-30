@@ -1,0 +1,16 @@
+.button{
+
+    background: white;
+    padding: 1rem 2rem;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: calc(var(--body-font-size) / 1.35);
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    margin: 1rem 0;
+    border: 2px solid var(--brand-light);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    animation: fadeIn 3s ease-in-out 1;
+    color: black;
+}
