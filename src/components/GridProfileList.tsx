@@ -54,9 +54,35 @@ const profiles = [
     description:
       "A proficient, energetic, and ambitious HR Manager who has been working with the Water Resources Commission of Ghana for over seventeen years.",
     src: "/images/florence.jpeg",
-    },
-
-    
+  },
+  {
+    name: "Stephanie Anyeley Coffie",
+    position: "Research Assistant",
+    description:
+      "As a trained research assistant, she focuses on social-work research, where she uncovers issues especially in the gender domain.",
+    src: "/images/stephanie.jpeg",
+  },
+  {
+    name: "Yaa Obeng",
+    position: "Administrative Secretary",
+    description:
+      "She is a trained adminstrative secretary. She has an extensive experience in adminstrative duties.",
+    src: "/images/yaa.jpeg",
+  },
+  {
+    name: "Larry-Bryan Johnpauls",
+    position: "Monitoring and Evaluation (M&E) Officer",
+    description:
+      "Larry is the M&E expert of our team ensuring all projects and programs go on according to the objectives set",
+    src: "/images/larry.jpg",
+  },
+  {
+    name: "Eyiram Celine Johnpauls",
+    position: "Youth Ambassador for Zhai",
+    description:
+      "She is a youth ambassador for Zhai. She is a trained social worker and has worked on several NGO projects.",
+    src: "/images/eyiram.jpg",
+  },
 ];
 
 const GridProfileList = () => {

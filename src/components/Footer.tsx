@@ -28,7 +28,7 @@ const navItems = [
 const FooterNav = () => {
   return (
     <>
-      <nav className={styles.navigation}>
+      <nav className={styles.navigation} style={{display:'flex',justifyContent:'center',alignItems:'center', margin:'0 auto' ,borderTop:'1px solid rgba(0,0,0,0.04)', maxWidth:'1200px'}}>
         <div id={styles.logo}>
           <Image
             width={64}
