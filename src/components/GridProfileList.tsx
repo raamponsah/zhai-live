@@ -55,6 +55,8 @@ const profiles = [
       "A proficient, energetic, and ambitious HR Manager who has been working with the Water Resources Commission of Ghana for over seventeen years.",
     src: "/images/florence.jpeg",
     },
+
+    
 ];
 
 const GridProfileList = () => {
