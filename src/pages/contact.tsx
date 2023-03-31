@@ -7,7 +7,8 @@ const Contact = () => {
   return (
     <Layout>
         <FullWidthSection title='Contact' bgColor='purple' color='white'></FullWidthSection>
-        <section style={{display:'flex', flexWrap:'wrap', gap:2}}>
+        <section style={{display:'flex', flexWrap:'wrap', gap:40, }}>
+            <ContactComponent></ContactComponent>
             <ContactComponent></ContactComponent>
            
         </section>

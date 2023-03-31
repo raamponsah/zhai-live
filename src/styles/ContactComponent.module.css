@@ -1,7 +1,7 @@
 .contactForm{
     display: flex;
     flex-direction: column;
-    max-width: 450px;
+    min-width:48.5vw;
     background-color: rgba(250, 235, 215, 0.29);
 
 }
@@ -17,11 +17,21 @@
 
 .contactForm div input{
     padding: 10px 1rem;
-    width: 100%;
+    min-width: 100%;
 
+}
+
+.contactForm h1{
+    padding: 20px;;
+    font-size: 2rem;
+    font-weight: 200;
 }
 
 .contactForm div textarea{
     padding: 10px 1rem;
-    width: 100%;
+    min-width: 100%;
+}
+
+.contactForm button{
+    
 }

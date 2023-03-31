@@ -4,6 +4,7 @@ const ContactComponent = () => {
   return (
     <div className={styles.contact}>
         <form className={styles.contactForm}>
+            <h1>Write to us</h1>
                 <div>
                 <label htmlFor="">Full Name</label>
                 <input type="text" name='fullname' />
@@ -24,6 +25,7 @@ const ContactComponent = () => {
                 <textarea name="message" id="message" cols={30} rows={10}></textarea>
                 </div>
 
+<button type='submit' >Send Message</button>
                 
             </form>
     </div>
