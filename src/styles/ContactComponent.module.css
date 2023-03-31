@@ -1,0 +1,27 @@
+.contactForm{
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    background-color: rgba(250, 235, 215, 0.29);
+
+}
+
+.contactForm div{
+    padding: 1rem;
+}
+
+.contactForm div label{
+    display: block;
+    margin:10px 0;
+}
+
+.contactForm div input{
+    padding: 10px 1rem;
+    width: 100%;
+
+}
+
+.contactForm div textarea{
+    padding: 10px 1rem;
+    width: 100%;
+}
