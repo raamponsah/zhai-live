@@ -1,8 +1,10 @@
 .contactForm{
     display: flex;
     flex-direction: column;
-    min-width:48.5vw;
-    background-color: rgba(250, 235, 215, 0.29);
+    min-width:35vw;
+    background-color: #f3ecff;
+    margin: 10px;
+    border-radius: 20px;
 
 }
 
@@ -16,8 +18,11 @@
 }
 
 .contactForm div input{
-    padding: 10px 1rem;
+    padding: 15px 1rem;
     min-width: 100%;
+    border: 1px solid rgba(128, 0, 128, 0.375);
+    border-radius: 5px;
+
 
 }
 
@@ -30,8 +35,26 @@
 .contactForm div textarea{
     padding: 10px 1rem;
     min-width: 100%;
+    outline: none;
+    border: 1px solid rgba(128, 0, 128, 0.375);
+    border-radius: 5px;
 }
 
 .contactForm button{
+
+    padding:15px;
+    max-width: 15vw;
+    appearance: none;
+    border:0;
+    outline: none;
+    background-color:purple;
+    color:white;
+    border-radius: 25px;;
+    margin: 10px;
+
+
     
+
+
+
 }

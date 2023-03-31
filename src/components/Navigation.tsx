@@ -30,7 +30,7 @@ const Navigation = () => {
       <nav className={styles.navigation}>
         <div id={styles.logo}>
         <Image width={64} height={64} alt='zhai-logo' src='/images/zhai-logo.png' />
-        <h1 className={styles.logo}>Zhai Foundation</h1>
+        <h1 className={styles.logo}><span style={{color:'teal'}}>Zhai</span> Foundation</h1>
         </div>
         <ul>
           {navItems.map((item, index) => (

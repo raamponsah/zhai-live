@@ -1,0 +1,13 @@
+.mapComponent{
+    max-width:30vw;
+ 
+
+    
+}
+
+
+.mapComponent .information{
+
+    display: flex;
+    gap: 40px;
+}
