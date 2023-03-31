@@ -1,7 +1,10 @@
 import React from "react";
 
+type DataObject = {
+  name:string
+}
 export const getStaticProps = async () => {
-  const data = 1;
+  const data = {name:'Ishmael'};
   return {
     props: { data },
   };
@@ -11,8 +14,8 @@ export const getStaticPaths = () => {
   return { paths: [{ params: { slug: "prince" } }], fallback: false };
 };
 
-const NewsArticle = ({ data }) => {
-  return <div>NewsArticle{data}</div>;
+const NewsArticle = ({ data }:{data:DataObject}) => {
+  return <div>NewsArticle {data?.name}</div>;
 };
 
 export default NewsArticle;
