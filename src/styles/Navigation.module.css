@@ -5,6 +5,7 @@
     align-items: center;
     background-color:var(--main);
     padding: 20px 10px;
+    box-shadow: 2px ;
 }
 
 .navigation #logo{
@@ -14,9 +15,12 @@
 }
 
 .navigation .logo {
-    font-size: 1.65rem;
+    font-size: 1.25rem;
     font-weight: 500;
     text-decoration: none;
+    text-transform: uppercase;
+    color: purple;
+
 
 }
 .navigation ul{
@@ -69,13 +73,13 @@
 
 
 .ctaButton {
-    background-color: var(--secondary);
+    background-color: purple;
     color: white;
     padding: 10px;
     border-radius: 5px;
     text-decoration: none;
-    outline: 1px solid var(--secondary);
-    outline-offset: 5px;
+    /* outline: 1px solid var(--secondary);
+    outline-offset: 5px; */
 }
 
 

@@ -14,8 +14,8 @@ const IconTextComponent = ({
   return (
     <motion.div layout
       className={styles.iconText}
-      initial={{opacity:0.5}}
-      whileHover={{ scale: 1.2 }}
+      initial={{opacity:0}}
+      animate={{opacity:1}}
       whileInView={{ opacity: 1 }}
  
     >

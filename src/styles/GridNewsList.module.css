@@ -1,0 +1,9 @@
+.newsList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    max-width: 100%;
+    flex-wrap: wrap;
+    margin-top: -10rem;
+}
