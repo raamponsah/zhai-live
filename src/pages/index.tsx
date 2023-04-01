@@ -24,7 +24,7 @@ export default function Home() {
    
         <HomeBanner />
 
-        <FullWidthSection
+        <FullWidthSection 
           title="Empowering Africa's Future"
           bgColor="#f3ecff"
           subphrase="At ZHAI foundation for Africa, we are committed to empowering the continent's future by providing education, healthcare, and sustainable development initiatives. Through our programs, we are breaking down barriers, creating opportunities, and supporting self-sufficiency. Join us in creating a brighter future for African children and families."

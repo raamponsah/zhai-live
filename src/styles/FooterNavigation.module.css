@@ -1,16 +1,17 @@
 
 .navigation {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     background-color:var(--main);
-    padding: 20px 10px;
+flex-direction: column;
     box-shadow: 2px ;
+    margin: 2rem 0;
 }
 
 .navigation #logo{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -20,6 +21,8 @@
     text-decoration: none;
     text-transform: uppercase;
     color: purple;
+
+
 }
 .navigation ul{
     color: white;
@@ -51,6 +54,12 @@
     color:black
 }
 
+
+.navigation p{
+    color:gray;
+    font-weight: 100;
+    font-size: 12px;
+}
 /* .navigation ul li a:hover {
     color:var(--main);
     background-color: black;
@@ -82,7 +91,9 @@
 
 
 /* responsive navigation styles */
+
 @media screen and (max-width: 1000px) {
+
 
 .navigation {
     display: flex;
@@ -91,19 +102,20 @@
     background-color:var(--main);
     padding: 20px 10px;
     box-shadow: 2px ;
+  
 }
-.hamburger{
-    display: block;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-}
-.navigation ul {
-    display: none;
-}
-.navigation ul li {
-    padding: 10px 0;
-}
+    .hamburger{
+        display: block;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .navigation ul {
+        display: none;
+    }
+    .navigation ul li {
+        padding: 10px 0;
+    }
 
 
 .ctaButton {

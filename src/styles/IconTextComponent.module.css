@@ -22,11 +22,14 @@
     .iconText{
         display: flex;
         flex-direction: column;
-        width: 100%;
+        min-width: 100%;
         justify-content: center;
         align-items: center;
+        text-align: center;
+        padding:2rem;
 
     }
+
     .text{
         font-size: 1rem;
         text-align: center;

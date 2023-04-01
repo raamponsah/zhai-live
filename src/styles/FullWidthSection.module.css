@@ -6,6 +6,7 @@
     padding: 5rem;
     background-color: var(--tertiary);
     min-width: 100%;
+    
 }
 
 .section div.textDisplay{
@@ -13,7 +14,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+padding: 2rem;
     max-width: 1000px;
     text-align: center;
 
@@ -24,6 +25,7 @@
     font-weight: 400;
     margin-bottom: 1rem;
     text-align: center;
+
 
 }
 
@@ -75,6 +77,16 @@
         font-weight: 300;
         margin-bottom: 1rem;
         line-height: 1.25;
+    
+    }
+
+    .section div.icons{
+        display: flex;
+        min-width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     
     }
 

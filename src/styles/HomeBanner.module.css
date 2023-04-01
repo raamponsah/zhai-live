@@ -1,23 +1,23 @@
 .homeBanner{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background:var(--secondary);
     max-height: 700px;
     overflow: hidden;
-
 }
 
 .homeBannerText{
     color:aliceblue;
     padding: 12rem;
-    width: 50%;
+    width: 50vw;
     line-height: 1;
     font-weight: 200;
+    width: 50vw;
 
 }
 
 .homeBannerText h1{
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
@@ -29,7 +29,7 @@
 }
 
 .homeBannerImage{
-    width: 50%;
+    width: 50vw;
     position: relative;
     position: unset !important;
     /* display: block; */
@@ -40,4 +40,40 @@
     width: 100% !important;
     position: relative !important;
     height: unset !important;
+  }
+
+  @media only screen and (max-width:1000px){
+    .homeBanner{
+        display: flex;
+       flex-wrap: wrap;
+        flex-direction: column-reverse;
+
+    
+    }
+.homeBannerText{
+    width: 100% !important;
+    padding: 2rem;
+    
+}
+
+.homeBannerText h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.homeBannerImage{
+    width: 100%;
+    position: relative;
+    position: unset !important;
+    display: none;
+}
+    
+.image {
+    object-fit: cover;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+    }
+
+
   }
