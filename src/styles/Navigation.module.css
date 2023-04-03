@@ -78,6 +78,16 @@ a.homeLink{
     display: none;
 }
 
+.overlayMenu{
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color:rgb(87, 84, 84);
+}
+
 
 .ctaButton {
     background-color: purple;
