@@ -5,11 +5,16 @@
     
 }
 
-
 .mapComponent .information{
+    margin-top: 20px;;
+}
+.mapComponent .information address{
 
     display: flex;
-    gap: 40px;
-    margin-top:20px;
-    color:rgba(0,0,0,0.6x)
+
+    margin-bottom:20px;
+    color:rgba(0,0,0,0.6x);
+    line-height:1.5;
+    font-style: normal;
+    color: rgba(0,0,0,0.8);
 }

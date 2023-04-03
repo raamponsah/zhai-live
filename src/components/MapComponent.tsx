@@ -15,18 +15,16 @@ const MapComponent = () => {
       </div>
       <div className={styles.information}>
         <div className="address">
-          <h4>Information</h4>
-          <p>
-            ADDRESS CASTLE BRIDGE STREET, EAST ADENTA, ACCRA, Adentan PHONE
-            (+233) 0245362113 EMAIL info@zhelpafricainternational.org
-          </p>
+          <h4>Location</h4>
+          <address>
+            ADDRESS CASTLE BRIDGE STREET, <br /> EAST ADENTA, ACCRA, Adentan <br /> 
+          </address>
         </div>
 
         <div className="digitalAddress">
-          <h4>Information</h4>
+          <h4>Contact Information</h4>
           <address>
-            ADDRESS CASTLE BRIDGE STREET, EAST ADENTA, ACCRA, Adentan PHONE
-            (+233) 0245362113 EMAIL info@zhelpafricainternational.org
+            PHONE (+233) 0245362113 <br /> EMAIL info@zhelpafricainternational.org
           </address>
         </div>
       </div>

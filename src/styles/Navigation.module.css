@@ -1,4 +1,13 @@
+.homeLink{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+}
+
+a.homeLink{
+    text-decoration: none;
+}
 .navigation {
     display: flex;
     justify-content: space-evenly;
