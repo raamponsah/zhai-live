@@ -13,4 +13,5 @@
 
 html,body{
   min-width: 100vw;
+  position: relative;
 }

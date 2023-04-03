@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "@/styles/Navigation.module.css";
 import Image from "next/image";
+import {useRef} from 'react'
 const navItems = [
   {
     name: "Initiatives",
@@ -25,6 +26,12 @@ const navItems = [
 ];
 
 const Navigation = () => {
+
+  const overlayRef = useRef<HTMLDivElement | null>(null);
+  const showOverlay = (e:Event)=>{
+    e.preventDefault();
+    console.log(overlayRef.current?.style)
+  }
   
   return (
     <>
@@ -46,7 +53,7 @@ const Navigation = () => {
           ))}
         </ul>
 
-        <div className={styles.hamburger} onClick={()=>{console.log('clicked')}}>
+        <div className={styles.hamburger} onClick={(e)=>showOverlay(e)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 14 14"
@@ -95,7 +102,7 @@ const Navigation = () => {
       
       </nav>
 
-      <div className={styles.overlayMenu}></div>
+      <div ref={overlayRef} className={styles.overlayMenu}></div>
     </>
   );
 };
