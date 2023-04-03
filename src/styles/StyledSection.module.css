@@ -1,0 +1,96 @@
+.section{
+    display: flex;
+
+    background-color: var(--tertiary);
+    min-width: 100%;
+    padding:5rem 8rem;
+    gap: 40px;
+    
+}
+
+.section div.textDisplay{
+    display: flex;
+    flex-direction: column;
+    
+    max-width: 100%;
+  
+
+}
+
+.section div.sidekick{
+
+}
+
+.section h4{
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  
+
+
+}
+
+.section h6{
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  
+}
+
+.section p{
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+    line-height: 1.25;
+
+}
+
+ .section div.icons{
+    display: flex;
+    max-width: 1500px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    .section{
+      padding: 0;
+      margin: 0;
+    
+    }
+
+    .section h4{
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+      
+    
+    }
+
+    .section p{
+        font-size: 1rem;
+        font-weight: 300;
+        margin-bottom: 1rem;
+        line-height: 1.25;
+    
+    }
+
+    .section div.icons{
+        display: flex;
+        min-width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+}
+
+

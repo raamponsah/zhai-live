@@ -25,6 +25,7 @@ const navItems = [
 ];
 
 const Navigation = () => {
+  
   return (
     <>
       <nav className={styles.navigation}>
