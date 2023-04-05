@@ -28,8 +28,8 @@ export const getStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
-const NewsArticle = ({ data }: { data: DataObjectType }) => {
-  return <div>NewsArticle {data?.id}</div>;
+const NewsArticle = ({ data }: {data: DataObjectType}) => {
+  return <div>NewsArticle {data?.attributes.Title}</div>;
 };
 
 export default NewsArticle;
