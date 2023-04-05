@@ -46,13 +46,14 @@ const GridNewsList = ({ list }: { list: DataObjectType[] }) => {
   return (
     <div className={styles.newsList}>
       {list.map((article) => (
-        <NewsItemComponent
-          id={article?.id}
-          content={article.attributes["Content"]}
-          key={article?.id}
-          title={article.attributes["Title"]}
-          cover={article.attributes["Cover"].data?.attributes.url}
-        />
+        <h1 key={article?.id}>{article?.id}</h1>
+        // <NewsItemComponent
+        //   id={article?.id}
+        //   content={article.attributes["Content"]}
+        //   key={article?.id}
+        //   title={article.attributes["Title"]}
+        //   cover={article.attributes["Cover"].data?.attributes.url}
+        // />
       ))}
     </div>
   );
