@@ -14,6 +14,7 @@ export const getStaticProps = async () => {
     "https://zhai-strapi-cms-production.up.railway.app/api/articles"
   );
   const data = await res.json();
+  console.log(data)
   return {
     props: { data },
   };
@@ -24,7 +25,8 @@ export const getStaticPaths = async () => {
     "https://zhai-strapi-cms-production.up.railway.app/api/articles"
   );
 
-  const { data } = await res.json();
+  const { data }:{data:DataObjectType[]} = await res.json();
+  console.log(data)
 
   const paths = data.map((d: DataObjectType) => {
 
