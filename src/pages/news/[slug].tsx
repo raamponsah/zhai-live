@@ -19,7 +19,7 @@ export const getStaticProps = async () => {
 
 export const getStaticPaths = async () => {
   const res = await fetch("https://zhai-strapi-cms-production.up.railway.app/api/articles");
-  const data = await res.json();
+  const data:DataObjectType[] = await res.json();
   const paths = data.map((d:DataObjectType)=>{
       return {params: {slug:d?.id}}
   })
