@@ -2,7 +2,7 @@ import Image from 'next/image'
 import styles from '@/styles/NewsItemComponent.module.css'
 import Link from 'next/link'
 
-const NewsItemComponent = ({id, cover, content, title}:{id:number, cover:string, content:string, title:string}) => {
+const NewsItemComponent = ({id, cover, content, title}:{id:number, cover?:string, content:string, title:string}) => {
   
   // const excerptFunction = (content:string)=>{
   //   return content.splice(0, 200)
