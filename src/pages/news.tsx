@@ -7,8 +7,19 @@ import NewsItemComponent from "@/components/NewsItemComponent";
 import Layout from "@/layouts/Layout";
 import Image from "next/image";
 
-const News = ({data}) => {
-  console.log(data)
+const News = ({
+  data,
+}: {
+  data: {
+    id: number;
+    attributes: {
+      Title: string;
+      Content: string;
+      Cover: { data: { attributes: { url: string } } };
+    };
+  }[];
+}) => {
+  console.log(data);
   return (
     <Layout>
       <FullWidthSection
@@ -20,7 +31,7 @@ const News = ({data}) => {
 
       <FullWidthSection bgColor="white">
         <section>
-        <GridNewsList data={data}/>
+          <GridNewsList data={data} />
         </section>
       </FullWidthSection>
 
@@ -31,7 +42,6 @@ const News = ({data}) => {
         title="Become a Member Today!"
         subtitle="Join our community of supporters and help us make a difference."
         subphrase="Joining Zhai Foundation is an opportunity to be a part of a powerful movement towards a more just and sustainable world. By joining Zhai, you can play an active role in creating positive change and making a meaningful impact in your community and beyond. Whether you are interested in volunteering your time and skills, making a donation, or simply spreading the word about their important work, there are many ways to get involved with Zhai. Join the Zhai community today and be a part of a brighter future for all."
-
       >
         <Button title="Learn More &rarr;" />
       </BgFullWidthSection>
@@ -41,12 +51,10 @@ const News = ({data}) => {
 
 export default News;
 
-
-
-export async function getServerSideProps(){
+export async function getServerSideProps() {
   // Fetch data from external API
-const res = await fetch(`http://localhost:1337/api/articles?populate=*`)
-const {data} = await res.json()
-// Pass data to the page via props
-return { props: { data } }
+  const res = await fetch(`http://localhost:1337/api/articles?populate=*`);
+  const { data } = await res.json();
+  // Pass data to the page via props
+  return { props: { data } };
 }
