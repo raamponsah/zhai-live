@@ -6,19 +6,9 @@ import GridNewsList from "@/components/GridNewsList";
 import NewsItemComponent from "@/components/NewsItemComponent";
 import Layout from "@/layouts/Layout";
 import Image from "next/image";
+import { DataObjectType } from "./news/[slug]";
 
-const News = ({
-  data,
-}: {
-  data: {
-    id: number;
-    attributes: {
-      Title: string;
-      Content: string;
-      Cover: { data: { attributes: { url: string } } };
-    };
-  }[];
-}) => {
+const News = ({ data }: { data: DataObjectType[] }) => {
   console.log(data);
   return (
     <Layout>
@@ -54,7 +44,7 @@ export default News;
 export async function getServerSideProps() {
   // Fetch data from external API
   const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}`);
-  const { data } = await res.json();
+  const { data }: { data: DataObjectType[] } = await res.json();
   // Pass data to the page via props
   return { props: { data } };
 }

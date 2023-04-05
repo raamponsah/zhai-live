@@ -1,6 +1,6 @@
 import React from "react";
 
-type DataObjectType = {
+export type DataObjectType = {
   id: number;
   attributes: {
     Title: string;
