@@ -11,7 +11,7 @@ type DataObjectType = {
 
 export const getStaticProps = async () => {
   const res = await fetch(
-    "https://zhai-strapi-cms-production.up.railway.app/api/articles?populate=*"
+    "https://zhai-strapi-cms-production.up.railway.app/api/articles"
   );
   const data = await res.json();
   return {
@@ -23,20 +23,23 @@ export const getStaticPaths = async () => {
   const res = await fetch(
     "https://zhai-strapi-cms-production.up.railway.app/api/articles"
   );
+
   const { data } = await res.json();
 
   const paths = data.map((d: DataObjectType) => {
+
     return {
       params: {
         slug: d?.attributes["Title"].split(" ").join("-").toLowerCase(),
       },
     };
   });
+
   return { paths, fallback: false };
 };
 
 const NewsArticle = ({ data }: { data: DataObjectType }) => {
-  return <div>NewsArticle {JSON.stringify(data?.attributes, null, 2)}</div>;
+  return <div>NewsArticles{data?.id}</div>;
 };
 
 export default NewsArticle;
