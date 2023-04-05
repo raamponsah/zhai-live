@@ -27,7 +27,7 @@ const navItems = [
 
 const Navigation = () => {
   const overlayRef = useRef<HTMLDivElement | null>(null);
-  const showOverlay = (e: Event) => {
+  const showOverlay = (e: MouseEvent) => {
     e.preventDefault();
     console.log(overlayRef.current?.style);
   };
@@ -56,7 +56,7 @@ const Navigation = () => {
           ))}
         </ul>
 
-        <div className={styles.hamburger} onClick={(e) => showOverlay(e)}>
+        <div className={styles.hamburger}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 14 14"
