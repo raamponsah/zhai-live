@@ -41,15 +41,15 @@ const news: article[] = [
   },
 ];
 
-const GridNewsList = ( data : DataObjectType[] ) => {
+const GridNewsList = ({ list }: { list: DataObjectType[] }) => {
   // console.log("hep?",data[0].attributes['Cover'].data.attributes.url)
   return (
     <div className={styles.newsList}>
-      {data.map((article, index) => (
+      {list.map((article) => (
         <NewsItemComponent
           id={article?.id}
-          content={article.attributes['Content']}
-          key={index}
+          content={article.attributes["Content"]}
+          key={article?.id}
           title={article.attributes["Title"]}
           cover={article.attributes["Cover"].data?.attributes.url}
         />
