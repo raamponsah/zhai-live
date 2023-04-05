@@ -48,7 +48,7 @@ const GridNewsList = ({ data }: { data: DataObjectType[] }) => {
       {data.map((article, index) => (
         <NewsItemComponent
           id={article?.id}
-          content={article.attributes.Content}
+          content={article.attributes['Content']}
           key={index}
           title={article.attributes["Title"]}
           cover={article.attributes["Cover"].data?.attributes.url}
