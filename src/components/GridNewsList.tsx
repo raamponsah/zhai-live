@@ -1,3 +1,4 @@
+import { DataObjectType } from "@/pages/news/[slug]";
 import NewsItemComponent from "./NewsItemComponent";
 import styles from "@/styles/GridNewsList.module.css";
 
@@ -40,18 +41,7 @@ const news: article[] = [
   },
 ];
 
-const GridNewsList = ({
-  data,
-}: {
-  data: {
-    id: number;
-    attributes: {
-      Title: string;
-      Content: string;
-      Cover:  { data: {attributes:{url:string}}  };
-    };
-  }[];
-}) => {
+const GridNewsList = ({ data }: { data: DataObjectType[] }) => {
   // console.log("hep?",data[0].attributes['Cover'].data.attributes.url)
   return (
     <div className={styles.newsList}>
