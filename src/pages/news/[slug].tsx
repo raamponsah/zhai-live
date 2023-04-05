@@ -36,7 +36,7 @@ export const getStaticPaths = async () => {
 };
 
 const NewsArticle = ({ data }: { data: DataObjectType }) => {
-  return <div>NewsArticle {data?.attributes["Title"]}</div>;
+  return <div>NewsArticle {JSON.stringify(data?.attributes, null, 2)}</div>;
 };
 
 export default NewsArticle;
