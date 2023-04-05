@@ -10,9 +10,8 @@ type DataObjectType = {
   }
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:1337/api/articles?populate=*");
+  const res = await fetch("https://zhai-strapi-cms-production.up.railway.app/api/articles?populate=*");
   const data = await res.json();
-  console.log()
   return {
     props: { data },
   };
