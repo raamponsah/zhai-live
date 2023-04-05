@@ -11,7 +11,7 @@ type DataObjectType = {
 
 export const getStaticProps = async () => {
   const res = await fetch(
-    "https://zhai-strapi-cms-production.up.railway.app/api/articles"
+    `${process.env.NEXT_PUBLIC_STRAPI_API_URL}`
   );
   const data = await res.json();
   console.log(data)
@@ -22,7 +22,7 @@ export const getStaticProps = async () => {
 
 export const getStaticPaths = async () => {
   const res = await fetch(
-    "https://zhai-strapi-cms-production.up.railway.app/api/articles"
+    `${process.env.NEXT_PUBLIC_STRAPI_API_URL}`
   );
 
   const { data }:{data:DataObjectType[]} = await res.json();
