@@ -22,13 +22,13 @@ export const getStaticPaths = async () => {
   const {data} = await res.json();
   
   const paths = data.map((d:DataObjectType)=>{
-      return {params: {slug:d?.attributes.Title.split(' ').join('-').toLowerCase()}}
+      return {params: {slug:d?.attributes['Title'].split(' ').join('-').toLowerCase()}}
   })
   return { paths, fallback: false };
 };
 
 const NewsArticle = ({ data }: {data: DataObjectType}) => {
-  return <div>NewsArticle {data?.attributes.Title}</div>;
+  return <div>NewsArticle {data?.attributes['Title']}</div>;
 };
 
 export default NewsArticle;
