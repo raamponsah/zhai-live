@@ -47,7 +47,7 @@ const GridNewsList = ({ list }: { list: DataObjectType[] }) => {
     <div className={styles.newsList}>
       {list.map((article) => (
        <>
-        <h1 key={article?.id}>{article?.attributes["Cover"]?.data?.attributes?.url}</h1>
+        <h1 key={article?.id}>Hello{article?.attributes["Cover"]?.data?.attributes?.url}</h1>
         <NewsItemComponent
           id={article?.id}
           content={article?.attributes["Content"]}
