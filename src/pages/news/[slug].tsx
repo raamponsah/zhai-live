@@ -1,8 +1,14 @@
 import React from "react";
 
-type DataObject = {
-  name: string;
-};
+type DatObjectType = {
+    id: number;
+    attributes: {
+      Title: string;
+      Content: string;
+      Cover:  { data: {attributes:{url:string}}  };
+    }
+  }
+
 export const getStaticProps = async () => {
   const res = await fetch("http://localhost:1337/api/articles?populate=*");
   const data = await res.json();
@@ -11,13 +17,13 @@ export const getStaticProps = async () => {
   };
 };
 
-export const getStaticPaths = () => {
+// export const getStaticPaths = () => {
 
-  return { paths: [{ params: { slug: "prince" } }], fallback: false };
-};
+//   return { paths: [{ params: { slug: "prince" } }], fallback: false };
+// };
 
-const NewsArticle = ({ data }: { data: DataObject }) => {
-  return <div>NewsArticle {data?.name}</div>;
+const NewsArticle = ({ data }: { data: DatObjectType }) => {
+  return <div>NewsArticle {data?.id}</div>;
 };
 
 export default NewsArticle;
