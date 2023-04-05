@@ -7,7 +7,8 @@ import NewsItemComponent from "@/components/NewsItemComponent";
 import Layout from "@/layouts/Layout";
 import Image from "next/image";
 
-const News = () => {
+const News = ({data}) => {
+  console.log(data)
   return (
     <Layout>
       <FullWidthSection
@@ -19,7 +20,7 @@ const News = () => {
 
       <FullWidthSection bgColor="white">
         <section>
-        <GridNewsList/>
+        <GridNewsList data={data}/>
         </section>
       </FullWidthSection>
 
@@ -39,3 +40,13 @@ const News = () => {
 };
 
 export default News;
+
+
+
+export async function getServerSideProps(){
+  // Fetch data from external API
+const res = await fetch(`http://localhost:1337/api/articles?populate=*`)
+const {data} = await res.json()
+// Pass data to the page via props
+return { props: { data } }
+}

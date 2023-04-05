@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "@/styles/Navigation.module.css";
 import Image from "next/image";
-import {useRef} from 'react'
+import { useRef } from "react";
 const navItems = [
   {
     name: "Initiatives",
@@ -26,24 +26,27 @@ const navItems = [
 ];
 
 const Navigation = () => {
-
   const overlayRef = useRef<HTMLDivElement | null>(null);
-  const showOverlay = (e:Event)=>{
+  const showOverlay = (e: Event) => {
     e.preventDefault();
-    console.log(overlayRef.current?.style)
-  }
-  
+    console.log(overlayRef.current?.style);
+  };
+
   return (
     <>
       <nav className={styles.navigation}>
         <div id={styles.logo}>
-          <Link href='/' className={styles.homeLink}>
-          <Image width={64} height={64} alt='zhai-logo' src='/images/zhai-logo.png' />
-        <h1 className={styles.logo}><span style={{color:'palevioletred'}}>Zhai</span> Foundation</h1>
-        
+          <Link href="/" className={styles.homeLink}>
+            <Image
+              width={64}
+              height={64}
+              alt="zhai-logo"
+              src="/images/zhai-logo.png"
+            />
+            <h1 className={styles.logo}>
+              <span style={{ color: "palevioletred" }}>Zhai</span> Foundation
+            </h1>
           </Link>
-        
-        
         </div>
         <ul>
           {navItems.map((item, index) => (
@@ -53,7 +56,7 @@ const Navigation = () => {
           ))}
         </ul>
 
-        <div className={styles.hamburger} onClick={(e)=>showOverlay(e)}>
+        <div className={styles.hamburger} onClick={(e) => showOverlay(e)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 14 14"
@@ -98,8 +101,6 @@ const Navigation = () => {
         <Link href="" className={styles.ctaButton}>
           <span>Donate</span>
         </Link>
-
-      
       </nav>
 
       <div ref={overlayRef} className={styles.overlayMenu}></div>
