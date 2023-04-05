@@ -41,7 +41,7 @@ const news: article[] = [
   },
 ];
 
-const GridNewsList = ({ data }: { data: DataObjectType[] }) => {
+const GridNewsList = ( data : DataObjectType[] ) => {
   // console.log("hep?",data[0].attributes['Cover'].data.attributes.url)
   return (
     <div className={styles.newsList}>
