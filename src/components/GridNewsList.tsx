@@ -49,10 +49,10 @@ const GridNewsList = ({ list }: { list: DataObjectType[] }) => {
         // <h1 key={article?.id}>{article?.id}</h1>
         <NewsItemComponent
           id={article?.id}
-          content={article.attributes["Content"]}
+          content={article?.attributes["Content"]}
           key={article?.id}
-          title={article.attributes["Title"]}
-          cover={article.attributes["Cover"].data.attributes.url}
+          title={article?.attributes["Title"]}
+          cover={article?.attributes["Cover"]?.data?.attributes?.url}
         />
       ))}
     </div>
