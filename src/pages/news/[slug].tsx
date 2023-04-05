@@ -1,6 +1,6 @@
 import React from "react";
 
-type DatObjectType = {
+type DataObjectType = {
     id: number;
     attributes: {
       Title: string;
@@ -17,12 +17,16 @@ export const getStaticProps = async () => {
   };
 };
 
-// export const getStaticPaths = () => {
+export const getStaticPaths = async () => {
+  const res = await fetch("http://localhost:1337/api/articles?populate=*");
+  const data = await res.json();
+  const paths = data.map((d:DataObjectType)=>{
+      return {params: {slug:d?.id}}
+  })
+  return { paths, fallback: false };
+};
 
-//   return { paths: [{ params: { slug: "prince" } }], fallback: false };
-// };
-
-const NewsArticle = ({ data }: { data: DatObjectType }) => {
+const NewsArticle = ({ data }: { data: DataObjectType }) => {
   return <div>NewsArticle {data?.id}</div>;
 };
 
