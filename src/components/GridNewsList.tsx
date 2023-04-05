@@ -52,7 +52,7 @@ const GridNewsList = ({ list }: { list: DataObjectType[] }) => {
           content={article.attributes["Content"]}
           key={article?.id}
           title={article.attributes["Title"]}
-          cover={article.attributes["Cover"].data?.attributes.url}
+          cover={article.attributes["Cover"].data.attributes.url}
         />
       ))}
     </div>
