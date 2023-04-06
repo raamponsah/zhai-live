@@ -6,6 +6,7 @@ export type DataObjectType = {
     Title: string;
     Content: string;
     Cover: { data: { attributes: { url: string } } };
+    Excerpt?: string;
   };
 };
 
@@ -31,8 +32,6 @@ export const getStaticPaths = async () => {
 
   return { paths, fallback: false };
 };
-
-
 
 const NewsArticle = ({ data }: { data: DataObjectType }) => {
   return <div>NewsArticles{data?.id}</div>;

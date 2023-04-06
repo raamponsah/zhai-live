@@ -23,7 +23,7 @@ const NewsItemComponent = ({ id, attributes }: DataObjectType) => {
 
       <h3>{attributes["Title"]}</h3>
       <h5>3rd May 2023 | Jeremy Phelps</h5>
-      markdown({attributes["Content"]})
+      markdown({attributes["Excerpt"]})
 
       <div className={styles.controls}>
         <h6>3rd May 2023</h6>
