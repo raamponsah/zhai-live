@@ -17,12 +17,13 @@ const NewsItemComponent = ({ id, attributes }: DataObjectType) => {
     <div className={styles.newsItem}>
       <div className={styles.imageContainer}>
         <Image
-            src={attributes['Cover']?.data?.attributes?.url}
+            src='https://res.cloudinary.com/dozaqkiam/image/upload/v1680734637/b206a7d6c5f91f26188bd38e52e6178f_d4330b6f1a.png
+            '
             alt=""
              width={500}
              height={500}
              priority
-             className={styles.image}
+            //  className={styles.image}
             />
       </div>
 
