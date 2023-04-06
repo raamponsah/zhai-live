@@ -33,7 +33,7 @@ const NewsItemComponent = ({ id, attributes }: DataObjectType) => {
       <div className={styles.controls}>
         <h6>3rd May 2023</h6>
         <h6>
-          <Link href={`http://localhost:1337/news/${id}`}>Read on &rarr;</Link>
+          <Link href={`http://localhost:1337/news/${attributes['Title'].split(' ').join('-')}`}>Read on &rarr;</Link>
         </h6>
         </div>
         
