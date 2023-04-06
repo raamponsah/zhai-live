@@ -16,15 +16,16 @@ const NewsItemComponent = ({ id, attributes }: DataObjectType) => {
   return (
     <div className={styles.newsItem}>
       <div className={styles.imageContainer}>
-        <Image
+        {/* <Image
               src={attributes['Cover'].data.attributes.url}
               alt=""
              fill
              className={styles.image}
-            />
+            /> */}
       </div>
 
       <h3>{attributes["Title"]}</h3>
+      <h6>{attributes['Cover'].data.attributes.url}</h6>
       <h5>3rd May 2023 | Jeremy Phelps</h5>
       <div dangerouslySetInnerHTML={{__html:DOMPurify.sanitize(marked.parse(`${attributes['Content']}`), {USE_PROFILES: {html: true}})}}>
 
