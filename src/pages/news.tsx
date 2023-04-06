@@ -21,10 +21,7 @@ const News = ({ data }: { data: DataObjectType[] }) => {
 
       <FullWidthSection bgColor="white">
         <section>
-          {data.map(d=>{
-           return <h1 key={d.id}>{d.attributes['Cover']?.data.attributes.url}</h1>
-          })}
-        <GridNewsList list={data}></GridNewsList>
+          <GridNewsList list={data}></GridNewsList>
         </section>
       </FullWidthSection>
 
