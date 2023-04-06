@@ -32,6 +32,8 @@ export const getStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
+
+
 const NewsArticle = ({ data }: { data: DataObjectType }) => {
   return <div>NewsArticles{data?.id}</div>;
 };
