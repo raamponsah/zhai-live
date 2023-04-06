@@ -10,26 +10,18 @@ export type DataObjectType = {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_STRAPI_API_URL}`
-  );
+  const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}`);
   const data = await res.json();
-  console.log(data)
   return {
     props: { data },
   };
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_STRAPI_API_URL}`
-  );
+  const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}`);
 
-  const { data }:{data:DataObjectType[]} = await res.json();
-  console.log(data)
-
-  const paths = data.map((d: DataObjectType) => {
-
+  const { data }: { data: DataObjectType[] } = await res.json();
+  const paths = data?.map((d: DataObjectType) => {
     return {
       params: {
         slug: d?.attributes["Title"].split(" ").join("-").toLowerCase(),
