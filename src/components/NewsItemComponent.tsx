@@ -17,8 +17,8 @@ const NewsItemComponent = ({ id, attributes }: DataObjectType) => {
     <div className={styles.newsItem}>
       <div className={styles.imageContainer}>
         <Image
-              src={attributes['Cover']?.data?.attributes?.url}
-              alt=""
+            src={attributes['Cover']?.data?.attributes?.url}
+            alt=""
              width={500}
              height={500}
              priority
