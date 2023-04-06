@@ -1,34 +1,36 @@
-import Image from 'next/image'
-import styles from '@/styles/NewsItemComponent.module.css'
-import Link from 'next/link'
+import Image from "next/image";
+import styles from "@/styles/NewsItemComponent.module.css";
+import Link from "next/link";
+import { DataObjectType } from "@/pages/news/[slug]";
 
-const NewsItemComponent = ({id, cover, content, title}:{id:number, cover?:string, content:string, title:string}) => {
-  
+const NewsItemComponent = ({ id, attributes }: DataObjectType) => {
   // const excerptFunction = (content:string)=>{
   //   return content.splice(0, 200)
   // }
-  
+
   return (
     <div className={styles.newsItem}>
-          <div className={styles.imageContainer}>
-            {/* <Image
+      <div className={styles.imageContainer}>
+        {/* <Image
               src={cover}
               alt=""
              fill
              className={styles.image}
             /> */}
-          </div>
+      </div>
 
-          <h3>{title} {cover}</h3>
-          {/* <h5>3rd May 2023 | Jeremy Phelps</h5> */}
-       {content}
+      <h3>{attributes["Title"]}</h3>
+      {/* <h5>3rd May 2023 | Jeremy Phelps</h5> */}
+      {attributes["Content"]}
 
-          <div className={styles.controls}>
-            <h6>3rd May 2023</h6>
-            <h6><Link href={`http://localhost:1337/news/${id}`}>Read on &rarr;</Link></h6>
-          </div>
+      <div className={styles.controls}>
+        <h6>3rd May 2023</h6>
+        <h6>
+          <Link href={`http://localhost:1337/news/${id}`}>Read on &rarr;</Link>
+        </h6>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default NewsItemComponent
+export default NewsItemComponent;
