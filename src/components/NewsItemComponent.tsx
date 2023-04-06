@@ -22,7 +22,7 @@ const NewsItemComponent = ({ id, attributes }: DataObjectType) => {
           src={attributes["Cover"]?.data?.attributes?.provider_metadata?.public_id} alt={""}      />
 
       <h3>{attributes["Title"]}</h3>
-      <h6>{attributes["Cover"]?.data?.attributes?.url}</h6>
+     
       <h5>3rd May 2023 | Jeremy Phelps</h5>
       <div
         dangerouslySetInnerHTML={{
