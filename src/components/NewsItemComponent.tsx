@@ -27,7 +27,7 @@ const NewsItemComponent = ({ id, attributes }: DataObjectType) => {
       <h3>{attributes["Title"]}</h3>
       <h5>3rd May 2023 | Jeremy Phelps</h5>
       <div>
-      { DOMPurify.sanitize(marked.parse(`${attributes['Excerpt']}`))}
+      { DOMPurify.sanitize(marked.parse(`${attributes['Excerpt']}`), {SAFE_FOR_TEMPLATES: true})}
       </div>
 
       <div className={styles.controls}>
