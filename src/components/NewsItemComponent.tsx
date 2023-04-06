@@ -2,6 +2,8 @@ import Image from "next/image";
 import styles from "@/styles/NewsItemComponent.module.css";
 import Link from "next/link";
 import { DataObjectType } from "@/pages/news/[slug]";
+import markdown, { getCodeString } from '@wcj/markdown-to-html';
+
 
 const NewsItemComponent = ({ id, attributes }: DataObjectType) => {
   // const excerptFunction = (content:string)=>{
@@ -21,7 +23,7 @@ const NewsItemComponent = ({ id, attributes }: DataObjectType) => {
 
       <h3>{attributes["Title"]}</h3>
       {/* <h5>3rd May 2023 | Jeremy Phelps</h5> */}
-      {attributes["Content"]}
+      markdown({attributes["Content"]})
 
       <div className={styles.controls}>
         <h6>3rd May 2023</h6>
