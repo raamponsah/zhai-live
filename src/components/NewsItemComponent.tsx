@@ -16,12 +16,12 @@ const NewsItemComponent = ({ id, attributes }: DataObjectType) => {
   return (
     <div className={styles.newsItem}>
       <div className={styles.imageContainer}>
-        {/* <Image
-              src={cover}
+        <Image
+              src={attributes['Cover'].data.attributes.url}
               alt=""
              fill
              className={styles.image}
-            /> */}
+            />
       </div>
 
       <h3>{attributes["Title"]}</h3>
@@ -33,7 +33,7 @@ const NewsItemComponent = ({ id, attributes }: DataObjectType) => {
       <div className={styles.controls}>
         <h6>3rd May 2023</h6>
         <h6>
-          <Link href={`http://localhost:1337/news/${attributes['Title'].split(' ').join('-').toLocaleLowerCase()}`}>Read on &rarr;</Link>
+          <Link href={`/news/${attributes['Title'].split(' ').join('-').toLocaleLowerCase()}`}>Read on &rarr;</Link>
         </h6>
         </div>
         
