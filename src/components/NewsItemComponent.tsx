@@ -26,7 +26,7 @@ const NewsItemComponent = ({ id, attributes }: DataObjectType) => {
 
       <h3>{attributes["Title"]}</h3>
       <h5>3rd May 2023 | Jeremy Phelps</h5>
-      <div dangerouslySetInnerHTML={{__html:DOMPurify.sanitize(marked.parse(`${attributes['Excerpt']}`), {USE_PROFILES: {html: true}})}}>
+      <div dangerouslySetInnerHTML={{__html:DOMPurify.sanitize(marked.parse(`${attributes['Content']}`), {USE_PROFILES: {html: true}})}}>
 
       </div>
 
