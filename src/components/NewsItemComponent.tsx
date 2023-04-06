@@ -3,6 +3,9 @@ import styles from "@/styles/NewsItemComponent.module.css";
 import Link from "next/link";
 import { DataObjectType } from "@/pages/news/[slug]";
 import { marked } from 'marked';
+import { JSDOM } from 'jsdom';
+// import DOMPurify from 'dompurify';
+import DOMPurify from 'isomorphic-dompurify';
 
 
 const NewsItemComponent = ({ id, attributes }: DataObjectType) => {
@@ -24,7 +27,7 @@ const NewsItemComponent = ({ id, attributes }: DataObjectType) => {
       <h3>{attributes["Title"]}</h3>
       <h5>3rd May 2023 | Jeremy Phelps</h5>
       <div>
-      {marked.parse(`${attributes['Excerpt']}`)}
+      { DOMPurify.sanitize(marked.parse(`${attributes['Excerpt']}`))}
       </div>
 
       <div className={styles.controls}>
