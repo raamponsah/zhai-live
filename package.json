@@ -23,6 +23,7 @@
     "jsdom": "^21.1.1",
     "marked": "^4.3.0",
     "next": "13.2.4",
+    "next-cloudinary": "^4.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",

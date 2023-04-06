@@ -5,7 +5,12 @@ export type DataObjectType = {
   attributes: {
     Title: string;
     Content: string;
-    Cover: { data: { attributes: { url: string } } };
+    Cover: {
+      data: {
+        id: number;
+        attributes: { url: string; provider_metadata: { public_id: string } };
+      };
+    };
     Excerpt?: string;
   };
 };

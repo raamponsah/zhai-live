@@ -6,6 +6,7 @@ import { marked } from "marked";
 import { JSDOM } from "jsdom";
 // import DOMPurify from 'dompurify';
 import DOMPurify from "isomorphic-dompurify";
+import { CldImage } from "next-cloudinary";
 
 const NewsItemComponent = ({ id, attributes }: DataObjectType) => {
   // const excerptFunction = (content:string)=>{
@@ -15,8 +16,10 @@ const NewsItemComponent = ({ id, attributes }: DataObjectType) => {
   return (
     <div className={styles.newsItem}>
       <div className={styles.imageContainer}>
-        <img src={attributes["Cover"].data.attributes.url} alt="" />
-      </div>
+      <CldImage
+          width="600"
+          height="600"
+          src={attributes["Cover"]?.data?.attributes?.provider_metadata?.public_id} alt={""}      />
 
       <h3>{attributes["Title"]}</h3>
       <h6>{attributes["Cover"]?.data?.attributes?.url}</h6>
@@ -42,6 +45,7 @@ const NewsItemComponent = ({ id, attributes }: DataObjectType) => {
           </Link>
         </h6>
       </div>
+    </div>
     </div>
   );
 };
