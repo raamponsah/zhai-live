@@ -54,6 +54,14 @@ const NewsArticle = ({ data }: { data: DataObjectType }) => {
         color="white"
         title={data.attributes.Title}
       ></FullWidthSection>
+
+      <div>
+        <img src={data.attributes.Cover.data.attributes.url} />
+        <div>{data.attributes.Content}</div>
+        
+      </div>
+
+
     </Layout>
   );
 };
