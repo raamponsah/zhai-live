@@ -2,18 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: "res.cloudinary.com",
-        port:'',
-        pathname: '/dozaqkiam/image/upload/**',
-        
-     
-      },
-    ],
-  },
+    domains: ['res.cloudinary.com']
+  }
 };
 
 module.exports = nextConfig;
