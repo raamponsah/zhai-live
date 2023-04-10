@@ -22,7 +22,6 @@ export type DataObjectType = {
 
 export const getStaticPaths = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}`);
-
   const { data }: { data: DataObjectType[] } = await res.json();
   const paths = data?.map((d: DataObjectType) => {
     return {
@@ -36,6 +35,7 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
+  console.log(`Params => ${params}`)
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_STRAPI_ARTICLES_ROUTE}/${params?.slug}`
   );
@@ -47,7 +47,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 };
 
 const NewsArticle = ({ data }: { data: DataObjectType }) => {
-  console.log(data)
+  console.log(data);
   return (
     <Layout>
       <FullWidthSection
@@ -59,10 +59,7 @@ const NewsArticle = ({ data }: { data: DataObjectType }) => {
       <div>
         <img src={data?.attributes?.Cover?.data?.attributes?.url} />
         <div>{data?.attributes?.Content}</div>
-
       </div>
-
-
     </Layout>
   );
 };
