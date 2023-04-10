@@ -15,11 +15,11 @@ const NewsItemComponent = ({ id, attributes }: DataObjectType) => {
   return (
     <div className={styles.newsItem}>
       <div className={styles.imageContainer}>
-      <CldImage
+      <Image
           width="600"
           height="600"
           src={attributes["Cover"]?.data?.attributes?.provider_metadata?.public_id} alt={""}   
-           
+
             />
 
       <h3>{attributes["Title"]}</h3>
