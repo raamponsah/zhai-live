@@ -48,9 +48,9 @@ export default News;
 //   return { props: { data } };
 // }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_ARTICLES_ROUTE}`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}`);
     const { data }: { data: DataObjectType[] } = await res.json();
     // Pass data to the page via props
     return { props: { data } };
