@@ -11,10 +11,6 @@ import { parse } from 'date-format-parse';
 
 
 const NewsItemComponent = (article: DataObjectType) => {
-  // const excerptFunction = (content:string)=>{
-  //   return content.splice(0, 200)
-  // }
-
   return (
     <div className={styles.newsItem}>
       <div className={styles.imageContainer}>
