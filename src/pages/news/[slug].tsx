@@ -57,7 +57,7 @@ const NewsArticle = ({ data }: { data: DataObjectType }) => {
 
       <div>
         <img src={data?.attributes?.Cover?.data?.attributes?.url} />
-        <div>{data.attributes.Content}</div>
+        <div>{data?.attributes?.Content}</div>
 
       </div>
 
