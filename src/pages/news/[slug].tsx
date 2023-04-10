@@ -42,7 +42,8 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
   const data = await res.json();
   console.log(data);
   return {
-    props: { data },
+    props: { data},
+    revalidate: 10, // In seconds
   };
 };
 
