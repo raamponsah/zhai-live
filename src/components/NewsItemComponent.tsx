@@ -9,6 +9,7 @@ import { CldImage } from "next-cloudinary";
 import { tsToUtcFormat, tsToLocalFormat } from "date-format-ms";
 
 const NewsItemComponent = (article: DataObjectType) => {
+  console.log(article);
   return (
     <div className={styles.newsItem}>
       <div className={styles.imageContainer}>
