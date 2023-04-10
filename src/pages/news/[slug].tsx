@@ -1,6 +1,7 @@
 import FullWidthSection from "@/components/BgFullWidthSection";
 import Layout from "@/layouts/Layout";
 import { GetStaticPropsContext } from "next";
+import Image from "next/image";
 import React from "react";
 
 export type DataObjectType = {
@@ -35,20 +36,19 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
-  console.log(`Params => ${params}`)
+  console.log(`Params => ${params}`);
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_STRAPI_ARTICLES_ROUTE}/${params?.slug}`
   );
   const data = await res.json();
-  console.log(data);
   return {
-    props: { data},
+    props: { data },
     revalidate: 10, // In seconds
   };
 };
 
 const NewsArticle = ({ data }: { data: DataObjectType }) => {
-  console.log(data);
+  console.log("Article=>", data);
   return (
     <Layout>
       <FullWidthSection
@@ -58,7 +58,12 @@ const NewsArticle = ({ data }: { data: DataObjectType }) => {
       ></FullWidthSection>
 
       <div>
-        <img src={data?.attributes?.Cover?.data?.attributes?.url} />
+        <Image
+          width={800}
+          height={400}
+          alt=""
+          src={data?.attributes?.Cover?.data?.attributes?.url}
+        />
         <div>{data?.attributes?.Content}</div>
       </div>
     </Layout>
