@@ -10,10 +10,10 @@ const GridNewsList = ({ list }: { list: DataObjectType[] }) => {
   return (
     <div className={styles.newsList}>
       {list.map((article) => (
-        <>
+        <div key={article?.id}>
           {/* <h1 key={article?.id}>{article?.attributes["Cover"]?.data?.attributes?.url}</h1> */}
-          <NewsItemComponent key={article?.id} {...article} />
-        </>
+          <NewsItemComponent  {...article} />
+        </div>
       ))}
     </div>
   );
