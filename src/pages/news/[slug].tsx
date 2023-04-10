@@ -1,11 +1,6 @@
 import FullWidthSection from "@/components/BgFullWidthSection";
 import Layout from "@/layouts/Layout";
-import {
-  GetStaticPathsContext,
-  GetStaticProps,
-  GetStaticPropsContext,
-  NextPageContext,
-} from "next";
+import { GetStaticPropsContext } from "next";
 import React from "react";
 
 export type DataObjectType = {
@@ -14,6 +9,7 @@ export type DataObjectType = {
     publishedAt: string;
     Title: string;
     Content: string;
+    Slug: string;
     Cover: {
       data: {
         id: number;
@@ -31,7 +27,7 @@ export const getStaticPaths = async () => {
   const paths = data?.map((d: DataObjectType) => {
     return {
       params: {
-        slug: d?.attributes["Title"].split(" ").join("-").toLowerCase(),
+        slug: d.attributes.Slug,
       },
     };
   });
@@ -44,7 +40,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
     `${process.env.NEXT_PUBLIC_STRAPI_ARTICLES_ROUTE}/${params?.slug}`
   );
   const data = await res.json();
-  console.log(data)
+  console.log(data);
   return {
     props: { data },
   };
@@ -53,7 +49,11 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 const NewsArticle = ({ data }: { data: DataObjectType }) => {
   return (
     <Layout>
-      <FullWidthSection bgColor="purple" color="white" title="Something here"></FullWidthSection>
+      <FullWidthSection
+        bgColor="purple"
+        color="white"
+        title="Something here"
+      ></FullWidthSection>
     </Layout>
   );
 };
