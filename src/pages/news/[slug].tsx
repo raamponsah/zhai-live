@@ -1,3 +1,11 @@
+import FullWidthSection from "@/components/BgFullWidthSection";
+import Layout from "@/layouts/Layout";
+import {
+  GetStaticPathsContext,
+  GetStaticProps,
+  GetStaticPropsContext,
+  NextPageContext,
+} from "next";
 import React from "react";
 
 export type DataObjectType = {
@@ -16,14 +24,6 @@ export type DataObjectType = {
   };
 };
 
-export const getStaticProps = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}`);
-  const data = await res.json();
-  return {
-    props: { data },
-  };
-};
-
 export const getStaticPaths = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}`);
 
@@ -39,8 +39,23 @@ export const getStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
+export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_STRAPI_ARTICLES_ROUTE}/${params?.slug}`
+  );
+  const data = await res.json();
+  console.log(data)
+  return {
+    props: { data },
+  };
+};
+
 const NewsArticle = ({ data }: { data: DataObjectType }) => {
-  return <div>NewsArticles{data?.id}</div>;
+  return (
+    <Layout>
+      <FullWidthSection bgColor="purple" color="white" title="Something here"></FullWidthSection>
+    </Layout>
+  );
 };
 
 export default NewsArticle;
