@@ -9,7 +9,6 @@ import Image from "next/image";
 import { DataObjectType } from "./news/[slug]";
 
 const News = ({ data }: { data: DataObjectType[] }) => {
-
   return (
     <Layout>
       <FullWidthSection
@@ -41,10 +40,21 @@ const News = ({ data }: { data: DataObjectType[] }) => {
 
 export default News;
 
-export async function getServerSideProps() {
-  // Fetch data from external API
-  const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}`);
-  const { data }: { data: DataObjectType[] } = await res.json();
-  // Pass data to the page via props
-  return { props: { data } };
+// export async function getServerSideProps() {
+//   // Fetch data from external API
+//   const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}`);
+//   const { data }: { data: DataObjectType[] } = await res.json();
+//   // Pass data to the page via props
+//   return { props: { data } };
+// }
+
+export async function getStaticProps() {
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}`);
+    const { data }: { data: DataObjectType[] } = await res.json();
+    // Pass data to the page via props
+    return { props: { data } };
+  } catch (error) {
+    console.log(`Error from GetStatiCProps: ${error}`);
+  }
 }
