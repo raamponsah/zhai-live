@@ -50,7 +50,7 @@ export default News;
 
 export async function getServerSideProps() {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_ARTICLES_ROUTE}`);
     const { data }: { data: DataObjectType[] } = await res.json();
     // Pass data to the page via props
     return { props: { data } };
