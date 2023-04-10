@@ -3,12 +3,13 @@ import React from "react";
 export type DataObjectType = {
   id: number;
   attributes: {
+    publishedAt: Date;
     Title: string;
     Content: string;
     Cover: {
       data: {
         id: number;
-        attributes: { url: string; provider_metadata: { public_id: string } };
+        attributes: { url: string; provider_metadata: { public_id: string }, publishedAt?:string };
       };
     };
     Excerpt?: string;
