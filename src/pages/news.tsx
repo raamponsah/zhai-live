@@ -9,6 +9,7 @@ import Image from "next/image";
 import { DataObjectType } from "./news/[slug]";
 
 const News = ({ data }: { data: DataObjectType[] }) => {
+  console.log(data);
   return (
     <Layout>
       <FullWidthSection
