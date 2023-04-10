@@ -3,7 +3,6 @@ import styles from "@/styles/NewsItemComponent.module.css";
 import Link from "next/link";
 import { DataObjectType } from "@/pages/news/[slug]";
 import { marked } from "marked";
-import { JSDOM } from "jsdom";
 // import DOMPurify from 'dompurify';
 import DOMPurify from "isomorphic-dompurify";
 import { CldImage } from "next-cloudinary";
