@@ -19,7 +19,7 @@ const NewsItemComponent = (article: DataObjectType) => {
           width="600"
           height="600"
           src={article.attributes["Cover"]?.data?.attributes?.url}
-          alt={""}
+          alt={article.attributes["Title"]}
         />
 
         <h3>{article.attributes["Title"]}</h3>
