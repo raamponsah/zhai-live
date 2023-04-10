@@ -52,7 +52,7 @@ const NewsArticle = ({ data }: { data: DataObjectType }) => {
       <FullWidthSection
         bgColor="purple"
         color="white"
-        title="Something here"
+        title={data.attributes.Title}
       ></FullWidthSection>
     </Layout>
   );
