@@ -47,6 +47,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 };
 
 const NewsArticle = ({ data }: { data: DataObjectType }) => {
+  console.log(data)
   return (
     <Layout>
       <FullWidthSection
