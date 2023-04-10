@@ -6,31 +6,30 @@ import { marked } from "marked";
 // import DOMPurify from 'dompurify';
 import DOMPurify from "isomorphic-dompurify";
 import { CldImage } from "next-cloudinary";
+import { tsToUtcFormat, tsToLocalFormat } from 'date-format-ms';
 
-import { parse } from 'date-format-parse';
 
 
 const NewsItemComponent = (article: DataObjectType) => {
   return (
     <div className={styles.newsItem}>
       <div className={styles.imageContainer}>
+
         <Image
           width="600"
           height="600"
-          src={
-            article.attributes["Cover"]?.data?.attributes?.provider_metadata
-              ?.public_id
-          }
+          src={article.attributes["Cover"]?.data?.attributes?.url}
           alt={""}
         />
 
         <h3>{article.attributes["Title"]}</h3>
-
+        <h5 style={{fontStyle:'italic'}}>{tsToUtcFormat(Date.parse(`${article.attributes.publishedAt}`), 'D d M Y')}</h5>
         {/* <h5>3rd May 2023 | Jeremy Phelps</h5> */}
+
         <div
           dangerouslySetInnerHTML={{
             __html: DOMPurify.sanitize(
-              marked.parse(`${article.attributes["Content"]}`),
+              marked.parse(`${article.attributes["Excerpt"]}`),
               {
                 USE_PROFILES: { html: true },
               }
@@ -39,9 +38,8 @@ const NewsItemComponent = (article: DataObjectType) => {
         ></div>
 
         <div className={styles.controls}>
-          <h6>
-        {`${article.attributes.publishedAt}`}
-          </h6>
+      <h6>{tsToUtcFormat(Date.parse(`${article.attributes.publishedAt}`), 'D d M Y')}</h6>
+
           <h6>
             <Link
               href={`/news/${article.attributes["Title"]
