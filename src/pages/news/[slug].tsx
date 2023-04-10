@@ -52,13 +52,13 @@ const NewsArticle = ({ data }: { data: DataObjectType }) => {
       <FullWidthSection
         bgColor="purple"
         color="white"
-        title={data.attributes.Title}
+        title={data?.attributes?.Title}
       ></FullWidthSection>
 
       <div>
-        <img src={data.attributes.Cover.data.attributes.url} />
+        <img src={data?.attributes?.Cover?.data?.attributes?.url} />
         <div>{data.attributes.Content}</div>
-        
+
       </div>
 
 
