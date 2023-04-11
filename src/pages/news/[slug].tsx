@@ -24,7 +24,7 @@ export type DataObjectType = {
 export const getStaticPaths = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}`);
   const { data }: { data: DataObjectType[] } = await res.json();
-  const paths = data?.map((d: DataObjectType) => {
+  const paths = data.map((d: DataObjectType) => {
     return {
       params: {
         slug: d.attributes.Slug,
@@ -36,36 +36,42 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
-  console.log(`Params => ${params}`);
+  console.log(`Params => ${params?.slug}`);
+  const slug = params?.slug
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_STRAPI_ARTICLES_ROUTE}/${params?.slug}`
+    `https://zhai-strapi-cms-production.up.railway.app/api/articles?filters[Slug][$eq]=${slug}`
   );
-  const data = await res.json();
+
+  console.log(`https://zhai-strapi-cms-production.up.railway.app/api/articles?filters[Slug][$eq]=${slug}`)
+  const article = await res.json();
+
   return {
-    props: { data },
-    revalidate: 10, // In seconds
+    props: { article },
   };
 };
 
-const NewsArticle = ({ data }: { data: DataObjectType }) => {
-  console.log("Article=>", data);
+const NewsArticle = ({ article }: { article:any }) => {
+  console.log("Article=>pop", article);
+  const {data} = article
+  console.log(data[0])
   return (
     <Layout>
       <FullWidthSection
         bgColor="purple"
         color="white"
-        title={data?.attributes?.Title}
+        title={data[0]?.attributes?.Title}
       ></FullWidthSection>
 
-      <div>
+
         <Image
+          src={data[0]?.attributes?.Cover?.data?.attributes?.url}
           width={800}
           height={400}
-          alt=""
-          src={data?.attributes?.Cover?.data?.attributes?.url}
+          alt={data[0]?.attributes?.Title}
+          loading="lazy"
         />
-        <div>{data?.attributes?.Content}</div>
-      </div>
+        <div>{data[0]?.attributes?.Content}</div>
+  
     </Layout>
   );
 };
