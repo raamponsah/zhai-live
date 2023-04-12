@@ -3,7 +3,7 @@ import styles from '@/styles/ContactComponent.module.css'
 const ContactComponent = () => {
   return (
     <div className={styles.contact}>
-        <form className={styles.contactForm}>
+        <form className={styles.contactForm} name="contact" data-netlify="true">
             <h1>Write to us</h1>
                 <div>
                 <label htmlFor="">Full Name</label>

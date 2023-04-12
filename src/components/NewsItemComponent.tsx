@@ -14,11 +14,16 @@ const NewsItemComponent = (article: DataObjectType) => {
     <div className={styles.newsItem}>
       <div className={styles.imageContainer}>
         <Image
-        width={500}
-        height={500}
+        width={650}
+        height={400}
           src={article.attributes["Cover"]?.data?.attributes?.url}
           alt={article.attributes["Title"]}
+          style={{borderRadius:'20px', marginBottom:'15px', top:0, left:0}}
+
         />
+        </div>
+        
+        <div>
 
         <h3>{article.attributes["Title"]}</h3>
         <h5 style={{ fontStyle: "italic" }}>

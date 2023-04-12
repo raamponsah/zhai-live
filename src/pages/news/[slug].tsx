@@ -42,8 +42,8 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
     `https://zhai-strapi-cms-production.up.railway.app/api/articles?filters[Slug][$eq]=${slug}`
   );
 
-  console.log(`https://zhai-strapi-cms-production.up.railway.app/api/articles?filters[Slug][$eq]=${slug}`)
-  const article = await res.json();
+  console.log(`https://zhai-strapi-cms-production.up.railway.app/api/articles?filters[Slug][$eq]=${slug}?populate=*`)
+  const article: DataObjectType = await res.json();
 
   return {
     props: { article },

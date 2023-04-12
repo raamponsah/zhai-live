@@ -5,5 +5,10 @@
     gap: 4rem;
     max-width: 100%;
     flex-wrap: wrap;
-    margin-top: -10rem;
+    margin-top: -100px;
+    position: relative;
+}
+
+.newsList div{
+    top:0;
 }
