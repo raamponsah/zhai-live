@@ -4,6 +4,8 @@ const ContactComponent = () => {
   return (
     <div className={styles.contact}>
         <form method='POST' className={styles.contactForm} name="contact" data-netlify="true">
+        <input type="hidden" name="contact" value="contact" />
+
             <h1>Write to us</h1>
                 <div>
                 <label htmlFor="">Full Name</label>
