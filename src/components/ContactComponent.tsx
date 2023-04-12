@@ -3,7 +3,7 @@ import styles from '@/styles/ContactComponent.module.css'
 const ContactComponent = () => {
   return (
     <div className={styles.contact}>
-        <form method='POST' className={styles.contactForm} name="contact" data-netlify="true">
+        <form method='POST' className={styles.contactForm} name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
         <input type="hidden" name="contact" value="contact" />
 
             <h1>Write to us</h1>
