@@ -15,7 +15,7 @@ const MapComponent = () => {
         <div className="address">
           <h4>Location</h4>
           <address>
-            ADDRESS CASTLE BRIDGE STREET, <br /> EAST ADENTA, ACCRA, Adentan <br /> 
+            ADDRESS CASTLE GATE STREET, <br /> EAST ADENTA, ACCRA, Adentan <br /> 
           </address>
         </div>
 
