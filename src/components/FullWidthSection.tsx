@@ -24,8 +24,11 @@ const FullWidthSection = ({
   children?: ReactNode;
   color?: string;
 }) => {
+
+  
+
   return (
-    <motion.div layout
+    <div
       className={styles.section}
       style={{
         backgroundColor: bgColor,
@@ -34,7 +37,9 @@ const FullWidthSection = ({
         objectFit: "cover",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        width:'100%'
+        width:'100%',
+      
+
       }}
     >
       <div className={styles.textDisplay}>
@@ -57,7 +62,7 @@ const FullWidthSection = ({
         })}
       </div>
       {children}
-    </motion.div>
+    </div>
   );
 };
 

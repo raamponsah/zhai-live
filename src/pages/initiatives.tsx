@@ -7,9 +7,12 @@ import Image from "next/image";
 import React from "react";
 
 const Initiatives = () => {
+ 
+
   return (
     <Layout>
       <FullWidthSection
+      
         bgColor="purple"
         color="white"
         title="Initiatives"
@@ -25,7 +28,7 @@ const Initiatives = () => {
         <Image
           style={{ borderRadius: "5px" }}
           alt=""
-          src="/images/ninno-jackjr-CG6Gd__QIOY-unsplash.jpg"
+          src="/images/alex-radelich-rtCfGTI7nCA-unsplash.jpg"
           width={400}
           height={300}
         ></Image>
@@ -40,7 +43,7 @@ const Initiatives = () => {
         <Image
           style={{ borderRadius: "5px" }}
           alt=""
-          src="/images/ninno-jackjr-CG6Gd__QIOY-unsplash.jpg"
+          src="/images/santi-vedri-O5EMzfdxedg-unsplash.jpg"
           width={400}
           height={300}
         ></Image>
@@ -55,7 +58,7 @@ const Initiatives = () => {
         <Image
           style={{ borderRadius: "5px" }}
           alt=""
-          src="/images/ninno-jackjr-CG6Gd__QIOY-unsplash.jpg"
+          src="/images/joshua-hanson-I49bIyEHaIs-unsplash.jpg"
           width={400}
           height={300}
         ></Image>
@@ -70,7 +73,7 @@ const Initiatives = () => {
         <Image
           style={{ borderRadius: "5px" }}
           alt=""
-          src="/images/ninno-jackjr-CG6Gd__QIOY-unsplash.jpg"
+          src="/images/seth-doyle-zf9_yiAekJs-unsplash.jpg"
           width={400}
           height={300}
         ></Image>

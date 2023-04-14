@@ -2,6 +2,7 @@ import styles from "@/styles/StyledSection.module.css";
 import IconTextComponent from "./IconTextComponent";
 import { PropsWithChildren, ReactElement, ReactNode } from "react";
 import { motion } from "framer-motion";
+import { useScroll, animated } from '@react-spring/web'
 
 const StyledSection = ({
   title,
@@ -26,8 +27,11 @@ const StyledSection = ({
   color?: string;
   flipped?: boolean;
 }) => {
+
+  const { scrollYProgress } = useScroll()
   return (
-    <div
+
+    <animated.div
       
       className={styles.section}
       style={{
@@ -38,7 +42,8 @@ const StyledSection = ({
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         width: "100%",
-       flexDirection: flipped?"row-reverse":"row"
+       flexDirection: flipped?"row-reverse":"row",
+       opacity:scrollYProgress
       }}
 
     >
@@ -52,7 +57,7 @@ const StyledSection = ({
       </div>
 
       <div className={styles.sidekick}>{children}</div>
-    </div>
+    </animated.div>
   );
 };
 
