@@ -22,7 +22,7 @@ export type DataObjectType = {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_ARTICLES_URL}`);
   const { data }: { data: DataObjectType[] } = await res.json();
   const paths = data.map((d: DataObjectType) => {
     return {
@@ -42,7 +42,6 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
     `https://zhai-strapi-cms-production.up.railway.app/api/articles?filters[Slug][$eq]=${slug}`
   );
 
-  console.log(`https://zhai-strapi-cms-production.up.railway.app/api/articles?filters[Slug][$eq]=${slug}?populate=*`)
   const article: DataObjectType = await res.json();
 
   return {
