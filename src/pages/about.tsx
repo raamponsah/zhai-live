@@ -9,7 +9,6 @@ import Image from "next/image";
 import React from "react";
 import { FaHeadSideMask, FaTheaterMasks } from "react-icons/fa";
 import { HiAcademicCap } from "react-icons/hi";
-import { IoHelpBuoy, IoWomanSharp } from "react-icons/io5";
 import { MdHealthAndSafety } from "react-icons/md";
 
 

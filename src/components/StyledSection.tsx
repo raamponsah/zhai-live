@@ -28,10 +28,10 @@ const StyledSection = ({
   flipped?: boolean;
 }) => {
 
-  const { scrollYProgress } = useScroll()
+ 
   return (
 
-    <animated.div
+    <div
       
       className={styles.section}
       style={{
@@ -43,7 +43,7 @@ const StyledSection = ({
         backgroundRepeat: "no-repeat",
         width: "100%",
        flexDirection: flipped?"row-reverse":"row",
-       opacity:scrollYProgress
+      
       }}
 
     >
@@ -57,7 +57,7 @@ const StyledSection = ({
       </div>
 
       <div className={styles.sidekick}>{children}</div>
-    </animated.div>
+    </div>
   );
 };
 
