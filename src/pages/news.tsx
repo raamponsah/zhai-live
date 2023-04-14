@@ -7,7 +7,7 @@ import Layout from "@/layouts/Layout";
 import { DataObjectType } from "./news/[slug]";
 
 const News = ({ data }: { data: DataObjectType[] }) => {
-  console.log(data);
+
   return (
     <Layout>
       <FullWidthSection
