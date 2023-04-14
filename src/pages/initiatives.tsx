@@ -70,7 +70,7 @@ const Initiatives = () => {
         <Image
           style={{ borderRadius: "5px" }}
           alt=""
-          src="/images/seth-doyle-zf9_yiAekJs-unsplash.jpg"
+          src="/images/5.jpeg"
           width={400}
           height={300}
         ></Image>

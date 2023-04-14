@@ -1,14 +1,13 @@
 import styles from "@/styles/BgFullWidthSection.module.css";
 import IconTextComponent from "./IconTextComponent";
-import { PropsWithChildren, ReactElement, ReactNode } from "react";
-import { motion } from "framer-motion";
+import { ReactElement, ReactNode } from "react";
 
-const FullWidthSection = ({
+const BgFullWidthSection = ({
   title,
   subtitle,
   subphrase,
   component,
-  bgColor,
+  bgColor='white',
   bgImage,
   iconSet,
   children,
@@ -25,7 +24,7 @@ const FullWidthSection = ({
   color?: string;
 }) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={{background:'white'}}>
     <div className={styles.overlay}></div>
     <div
       className={styles.section}
@@ -66,4 +65,4 @@ const FullWidthSection = ({
   );
 };
 
-export default FullWidthSection;
+export default BgFullWidthSection;

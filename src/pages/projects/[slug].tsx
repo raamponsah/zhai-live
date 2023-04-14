@@ -1,9 +1,14 @@
-import FullWidthSection from "@/components/BgFullWidthSection";
+import FullWidthSection from "@/components/FullWidthSection";
 import Layout from "@/layouts/Layout";
+
+import { marked } from "marked";
 import { GetStaticPropsContext } from "next";
 import Image from "next/image";
 import React from "react";
-
+import styles from "@/styles/Project.module.css";
+import DOMPurify from "isomorphic-dompurify";
+import StyledSection from "@/components/StyledSection";
+import BgFullWidthSection from "@/components/BgFullWidthSection";
 export type DataObjectType = {
   id: number;
   attributes: {
@@ -48,7 +53,6 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 };
 
 const Project = ({ project }: { project: any }) => {
-  
   const { data } = project;
 
   return (
@@ -66,7 +70,21 @@ const Project = ({ project }: { project: any }) => {
         alt={data[0]?.attributes?.Title}
         loading="lazy"
       />
-      <div>{data[0]?.attributes?.Content}</div>
+
+      <FullWidthSection bgColor="white">
+        <div
+          style={{ background: "white !important" }}
+          dangerouslySetInnerHTML={{
+            __html: DOMPurify.sanitize(
+              marked.parse(`${data[0].attributes["Content"]}`),
+              {
+                USE_PROFILES: { html: true },
+              }
+            ),
+          }}
+        ></div>
+      </FullWidthSection>
+
     </Layout>
   );
 };

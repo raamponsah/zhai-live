@@ -1,7 +1,6 @@
 import styles from "@/styles/FullWidthSection.module.css";
 import IconTextComponent from "./IconTextComponent";
-import { PropsWithChildren, ReactElement, ReactNode } from "react";
-import { motion } from "framer-motion";
+import { ReactElement, ReactNode } from "react";
 
 const FullWidthSection = ({
   title,
@@ -24,9 +23,6 @@ const FullWidthSection = ({
   children?: ReactNode;
   color?: string;
 }) => {
-
-  
-
   return (
     <div
       className={styles.section}
@@ -37,9 +33,7 @@ const FullWidthSection = ({
         objectFit: "cover",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        width:'100%',
-      
-
+        width: "100%",
       }}
     >
       <div className={styles.textDisplay}>
@@ -48,7 +42,6 @@ const FullWidthSection = ({
         <p style={{ color }}>{subphrase}</p>
       </div>
 
-      
       <div className={styles.icons}>
         {iconSet?.map((iconText, i) => {
           return (
