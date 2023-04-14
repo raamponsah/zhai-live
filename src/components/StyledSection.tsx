@@ -1,8 +1,9 @@
 import styles from "@/styles/StyledSection.module.css";
-import IconTextComponent from "./IconTextComponent";
-import { PropsWithChildren, ReactElement, ReactNode } from "react";
-import { motion } from "framer-motion";
-import { useScroll, animated } from '@react-spring/web'
+import { ReactElement, ReactNode } from "react";
+import Link from "next/link";
+
+
+
 
 const StyledSection = ({
   title,
@@ -14,7 +15,9 @@ const StyledSection = ({
   iconSet,
   children,
   color,
-  flipped=false,
+  flipped = false,
+  hasLink=false,
+  link,
 }: {
   title?: string;
   subtitle?: string;
@@ -26,13 +29,11 @@ const StyledSection = ({
   children?: ReactNode;
   color?: string;
   flipped?: boolean;
+  hasLink?: boolean;
+  link?:string
 }) => {
-
- 
   return (
-
     <div
-      
       className={styles.section}
       style={{
         backgroundColor: bgColor,
@@ -42,18 +43,14 @@ const StyledSection = ({
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         width: "100%",
-       flexDirection: flipped?"row-reverse":"row",
-      
+        flexDirection: flipped ? "row-reverse" : "row",
       }}
-
     >
-
-
-        
       <div className={styles.textDisplay}>
         <h4 style={{ color }}>{title}</h4>
         <h6 style={{ color }}>{subtitle}</h6>
         <p style={{ color }}>{subphrase}</p>
+        {hasLink && <Link className={styles.link} href={link}>Learn more</Link>}
       </div>
 
       <div className={styles.sidekick}>{children}</div>

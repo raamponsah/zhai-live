@@ -2,6 +2,8 @@ import FullWidthSection from "@/components/BgFullWidthSection";
 import Navigation from "@/components/Navigation";
 import React from "react";
 import { DataObjectType } from "./news/[slug]";
+import StyledSection from "@/components/StyledSection";
+import Image from "next/image";
 
 const ProjectsPage = ({data}:{data:any}) => {
   console.log(data)
@@ -15,7 +17,30 @@ const ProjectsPage = ({data}:{data:any}) => {
       ></FullWidthSection>
 
       {
-        
+        data?.map((datum:any)=>{
+          return <div key={datum.id}>
+            <StyledSection
+          title={datum.attributes['Title']}
+          subphrase="The Zhai Foundation initiative on education aims to improve access to quality education for disadvantaged and marginalized communities. It achieves this through scholarship programs, building and renovating educational infrastructure, teacher training, and community outreach. The foundation is committed to empowering individuals and communities to reach their full potential through education."
+          flipped={false}
+          bgColor="rgb(243, 236, 255)"
+          hasLink={true}
+          link={`projects/${datum.attributes['Slug']}`}
+        >
+          <Image
+            style={{ borderRadius: "5px" }}
+            alt=""
+            src={datum.attributes["Cover"]?.data?.attributes?.url}
+
+            // {datum.attributes["Cover"]?.data?.attributes?.url}
+            width={400}
+            height={300}
+          ></Image>
+
+          
+        </StyledSection>
+          </div>
+        })
       }
     </>
   );
@@ -28,6 +53,7 @@ export const getServerSideProps = async () => {
     );
     const { data }: { data: DataObjectType[] } = await res.json();
     // Pass data to the page via props
+    console.log(data)
     return { props: { data } };
   } catch (error) {
     console.log(`Error from getServerSideProps: ${error}`);

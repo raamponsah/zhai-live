@@ -14,7 +14,18 @@
     flex-direction: column;
     max-width: 100%;
 }
-
+.section div.textDisplay a.link{
+    border:1px solid rgb(200, 134, 200);
+    display: flex;
+    max-width:180px ;
+    padding: 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    justify-content: center;
+    font-weight: 100;
+    color: purple;
+    
+}
 .section div.sidekick{
     
 }
