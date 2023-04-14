@@ -98,7 +98,7 @@ const Navigation = () => {
           </svg>
         </div>
 
-        <Link href="" className={styles.ctaButton}>
+        <Link href="/contact" className={styles.ctaButton}>
           <span>Donate</span>
         </Link>
       </nav>

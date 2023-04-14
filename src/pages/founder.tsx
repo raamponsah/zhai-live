@@ -2,6 +2,8 @@ import FullWidthSection from "@/components/BgFullWidthSection";
 import Navigation from "@/components/Navigation";
 import StyledSection from "@/components/StyledSection";
 import Image from "next/image";
+import BgFullWidthSection from "@/components/BgFullWidthSection";
+import Button from "@/components/Button";
 
 const FounderPage = () => {
   return (
@@ -21,6 +23,17 @@ const FounderPage = () => {
           height={500}
         ></Image>
       </StyledSection>
+
+      <BgFullWidthSection
+        color="white"
+        bgColor="#2196f3"
+        bgImage="/images/ninno-jackjr-CG6Gd__QIOY-unsplash.jpg"
+        title="Become a Member Today!"
+        subtitle="Join our community of supporters and help us make a difference."
+        subphrase="Joining Zhai Foundation is an opportunity to be a part of a powerful movement towards a more just and sustainable world. By joining Zhai, you can play an active role in creating positive change and making a meaningful impact in your community and beyond. Whether you are interested in volunteering your time and skills, making a donation, or simply spreading the word about their important work, there are many ways to get involved with Zhai. Join the Zhai community today and be a part of a brighter future for all."
+      >
+        <Button title="Learn More &rarr;" />
+      </BgFullWidthSection>
     </>
   );
 };
