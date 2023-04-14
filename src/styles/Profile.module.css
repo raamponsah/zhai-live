@@ -9,6 +9,12 @@
     align-items: center;
     margin-bottom: 12px;
     position: relative;
+   
+}
+
+.imageBox img{
+    object-fit:scale-down
+
 }
 
 .profile{

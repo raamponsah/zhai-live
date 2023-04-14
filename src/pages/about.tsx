@@ -3,11 +3,9 @@ import FullWidthSection from "@/components/FullWidthSection";
 import BgFullWidthSection from "@/components/BgFullWidthSection";
 import GridProfileList from "@/components/GridProfileList";
 import IconTextComponent from "@/components/IconTextComponent";
-import Profile from "@/components/Profile";
 import Layout from "@/layouts/Layout";
-import Image from "next/image";
 import React from "react";
-import { FaHeadSideMask, FaTheaterMasks } from "react-icons/fa";
+import { FaTheaterMasks } from "react-icons/fa";
 import { HiAcademicCap } from "react-icons/hi";
 import { MdHealthAndSafety } from "react-icons/md";
 

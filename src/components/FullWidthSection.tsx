@@ -48,7 +48,7 @@ const FullWidthSection = ({
         <p style={{ color }}>{subphrase}</p>
       </div>
 
-      <div className={styles.icons}>{component}</div>
+      
       <div className={styles.icons}>
         {iconSet?.map((iconText, i) => {
           return (

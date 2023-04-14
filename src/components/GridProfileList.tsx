@@ -19,7 +19,7 @@ const profiles = [
   },
 
   {
-    name: "John Paul",
+    name: "John-Paul Azaonoo",
     position: "CEO & Country Director- Ghana ",
     description:
       "John-Paul cares about the suffering of the poor, especially school dropouts who survive by selling goods on the street. He is also an accomplished educationist and business administrator",
@@ -82,6 +82,13 @@ const profiles = [
     description:
       "She is a youth ambassador for Zhai. She is a trained social worker and has worked on several NGO projects.",
     src: "/images/eyiram.jpg",
+  },
+  {
+    name: "Henry Johnpauls",
+    position: "Head - Youth Programme Planning",
+    description:
+      "She is a youth ambassador for Zhai. She is a trained social worker and has worked on several NGO projects.",
+    src: "/images/henry.jpeg",
   },
 ];
 
