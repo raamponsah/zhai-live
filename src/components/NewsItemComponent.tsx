@@ -5,8 +5,7 @@ import { DataObjectType } from "@/pages/news/[slug]";
 import { marked } from "marked";
 // import DOMPurify from 'dompurify';
 import DOMPurify from "isomorphic-dompurify";
-import { CldImage } from "next-cloudinary";
-import { tsToUtcFormat, tsToLocalFormat } from "date-format-ms";
+import { tsToUtcFormat } from "date-format-ms";
 
 const NewsItemComponent = (article: DataObjectType) => {
   console.log("article: ",article);

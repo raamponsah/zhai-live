@@ -11,6 +11,8 @@ import { FaHeadSideMask, FaTheaterMasks } from "react-icons/fa";
 import { HiAcademicCap } from "react-icons/hi";
 import { IoHelpBuoy, IoWomanSharp } from "react-icons/io5";
 import { MdHealthAndSafety } from "react-icons/md";
+
+
 const About = () => {
   return (
     <Layout>

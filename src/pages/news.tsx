@@ -3,9 +3,7 @@ import FullWidthSection from "@/components/FullWidthSection";
 import BgFullWidthSection from "@/components/BgFullWidthSection";
 
 import GridNewsList from "@/components/GridNewsList";
-import NewsItemComponent from "@/components/NewsItemComponent";
 import Layout from "@/layouts/Layout";
-import Image from "next/image";
 import { DataObjectType } from "./news/[slug]";
 
 const News = ({ data }: { data: DataObjectType[] }) => {
