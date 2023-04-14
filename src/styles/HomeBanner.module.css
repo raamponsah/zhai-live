@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-evenly;
     background:var(--secondary);
-    max-height: 450px;
+    max-height: 400px;
     overflow: hidden;
 }
 
