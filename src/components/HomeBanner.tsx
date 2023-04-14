@@ -10,7 +10,7 @@ const HomeBanner = () => {
 
 
     <div className={styles.homeBannerImage}>
-        <Image src="/images/founder.jpeg" alt="home-banner" layout="fill" className={styles.image} />
+        <Image src="/images/bill-wegener-P0OJbBJ1ZTM-unsplash.jpg" alt="home-banner" fill className={styles.image} />
     </div>
 
   </div>;
