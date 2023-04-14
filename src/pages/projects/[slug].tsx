@@ -48,9 +48,9 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 };
 
 const Project = ({ project }: { project: any }) => {
-  console.log("project=>pop", project);
+  
   const { data } = project;
-  console.log(data[0]);
+
   return (
     <Layout>
       <FullWidthSection
