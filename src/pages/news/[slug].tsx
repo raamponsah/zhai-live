@@ -1,9 +1,11 @@
-import FullWidthSection from "@/components/BgFullWidthSection";
+import FullWidthSection from "@/components/FullWidthSection";
 import Layout from "@/layouts/Layout";
+
+import { marked } from "marked";
 import { GetStaticPropsContext } from "next";
 import Image from "next/image";
 import React from "react";
-
+import DOMPurify from "isomorphic-dompurify";
 export type DataObjectType = {
   id: number;
   attributes: {
@@ -37,22 +39,19 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
   console.log(`Params => ${params?.slug}`);
-  const slug = params?.slug
+  const slug = params?.slug;
   const res = await fetch(
     `https://zhai-strapi-cms-production.up.railway.app/api/articles?filters[Slug][$eq]=${slug}`
   );
-
-  const article: DataObjectType = await res.json();
-
+  const project: DataObjectType = await res.json();
   return {
-    props: { article },
+    props: { project },
   };
 };
 
-const NewsArticle = ({ article }: { article:any }) => {
-  console.log("Article=>pop", article);
-  const {data} = article
-  console.log(data[0])
+const Project = ({ project }: { project: any }) => {
+  const { data } = project;
+
   return (
     <Layout>
       <FullWidthSection
@@ -61,18 +60,30 @@ const NewsArticle = ({ article }: { article:any }) => {
         title={data[0]?.attributes?.Title}
       ></FullWidthSection>
 
+      {/* <Image
+        src={data[0]?.attributes["Cover"]?.data?.attributes?.url}
+        width={800}
+        height={400}
+        alt={data[0]?.attributes?.Title}
+        loading="lazy"
+      /> */}
 
-        <Image
-          src={data[0]?.attributes?.Cover?.data?.attributes?.url}
-          width={800}
-          height={400}
-          alt={data[0]?.attributes?.Title}
-          loading="lazy"
-        />
-        <div>{data[0]?.attributes?.Content}</div>
-  
+      <FullWidthSection bgColor="white">
+        <div
+          style={{ marginTop: "-20vh" }}
+          dangerouslySetInnerHTML={{
+            __html: DOMPurify.sanitize(
+              marked.parse(`${data[0].attributes["Content"]}`),
+              {
+                USE_PROFILES: { html: true },
+              }
+            ),
+          }}
+        ></div>
+      </FullWidthSection>
+
     </Layout>
   );
 };
 
-export default NewsArticle;
+export default Project;
