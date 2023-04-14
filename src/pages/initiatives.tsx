@@ -26,7 +26,7 @@ const Initiatives = () => {
           style={{ borderRadius: "5px" }}
           alt=""
           src="/images/3.jpeg"
-          width={400}
+          width={450}
           height={300}
         ></Image>
       </StyledSection>
@@ -40,8 +40,8 @@ const Initiatives = () => {
         <Image
           style={{ borderRadius: "5px" }}
           alt=""
-          src="/images/santi-vedri-O5EMzfdxedg-unsplash.jpg"
-          width={400}
+          src="/images/francisco-venancio-M4Xloxsg0Gw-unsplash.jpg"
+          width={450}
           height={300}
         ></Image>
       </StyledSection>
@@ -56,7 +56,7 @@ const Initiatives = () => {
           style={{ borderRadius: "5px" }}
           alt=""
           src="/images/joshua-hanson-I49bIyEHaIs-unsplash.jpg"
-          width={400}
+          width={450}
           height={300}
         ></Image>
       </StyledSection>
@@ -71,7 +71,7 @@ const Initiatives = () => {
           style={{ borderRadius: "5px" }}
           alt=""
           src="/images/5.jpeg"
-          width={400}
+          width={450}
           height={300}
         ></Image>
       </StyledSection>
