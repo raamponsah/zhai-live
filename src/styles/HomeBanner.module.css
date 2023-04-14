@@ -2,17 +2,16 @@
     display: flex;
     justify-content: space-evenly;
     background:var(--secondary);
-    max-height: 700px;
+    max-height: 450px;
     overflow: hidden;
 }
 
 .homeBannerText{
     color:aliceblue;
-    padding: 12rem;
+    padding: 4rem 8rem;
     width: 50vw;
     line-height: 1;
     font-weight: 200;
-    width: 50vw;
 
 }
 
