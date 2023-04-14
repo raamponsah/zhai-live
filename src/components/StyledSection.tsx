@@ -30,7 +30,7 @@ const StyledSection = ({
   color?: string;
   flipped?: boolean;
   hasLink?: boolean;
-  link?:string
+  link?:string | null | '';
 }) => {
   return (
     <div
