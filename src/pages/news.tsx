@@ -47,13 +47,13 @@ export default News;
 //   return { props: { data } };
 // }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}`);
     const { data }: { data: DataObjectType[] } = await res.json();
     // Pass data to the page via props
     return { props: { data } };
   } catch (error) {
-    console.log(`Error from GetStatiCProps: ${error}`);
+    console.log(`Error from getServerSideProps: ${error}`);
   }
 }
