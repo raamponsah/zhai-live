@@ -16,6 +16,10 @@ const navItems = [
     link: "/about",
   },
   {
+    name: "Projects",
+    link: "/projects",
+  },
+  {
     name: "News",
     link: "/news",
   },
@@ -27,15 +31,13 @@ const navItems = [
 
 const Navigation = () => {
   const overlayRef = useRef<HTMLDivElement | null>(null);
-  const showOverlay = (e:any) => {
+  const showOverlay = (e: any) => {
     e.preventDefault();
-    overlayRef.current!.style.display = "flex"
-    overlayRef.current?.classList.add('overlayClass');
-    
-   
+    overlayRef.current!.style.display = "flex";
+    overlayRef.current?.classList.add("overlayClass");
+
     console.log(overlayRef.current);
   };
-
 
   return (
     <>
@@ -61,9 +63,12 @@ const Navigation = () => {
           ))}
         </ul>
 
-        <div className={styles.hamburger} onClick={(e) => {
-          showOverlay(e);
-        }}>
+        <div
+          className={styles.hamburger}
+          onClick={(e) => {
+            showOverlay(e);
+          }}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 14 14"
@@ -110,27 +115,23 @@ const Navigation = () => {
         </Link>
       </nav>
 
-      <div
-        
-        ref={overlayRef}
-        className={styles.overlayMenu}
-      >
-        <div className={styles.closeMenu} onClick={(e) => {
-          overlayRef.current!.style.display = "none"
-        }}>
-         X
+      <div ref={overlayRef} className={styles.overlayMenu}>
+        <div
+          className={styles.closeMenu}
+          onClick={(e) => {
+            overlayRef.current!.style.display = "none";
+          }}
+        >
+          X
         </div>
 
-
-     <ul>
+        <ul>
           {navItems.map((item, index) => (
             <li key={index}>
               <Link href={item.link}>{item.name}</Link>
             </li>
           ))}
         </ul>
-
-
       </div>
     </>
   );
