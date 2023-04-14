@@ -76,18 +76,65 @@ a.homeLink{
 
 .hamburger {
     display: none;
+    cursor: pointer;
 }
 
 .overlayMenu{
-    min-width: 100%;
-    min-height: 100%;
-    top:0;
-    left:0;
-    background-color:rgba(17, 17, 17, 0.95);
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary);
     z-index: 900;
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
+.overlayMenu ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.overlayMenu ul li{
+    list-style: none;
+    padding: 10px;
+}
+
+.overlayMenu ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.overlayMenu ul li a:hover{
+    color: white;
+    background-color: var(--primary);
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+.overlayMenu .closeMenu{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+
+
 
 
 .ctaButton {
@@ -117,6 +164,8 @@ a.homeLink{
     color: white;
     font-size: 2rem;
     cursor: pointer;
+    padding: 4px;
+    
 }
 .navigation ul {
     display: none;

@@ -27,10 +27,15 @@ const navItems = [
 
 const Navigation = () => {
   const overlayRef = useRef<HTMLDivElement | null>(null);
-  const showOverlay = (e: MouseEvent) => {
+  const showOverlay = (e:any) => {
     e.preventDefault();
-    console.log(overlayRef.current?.style);
+    overlayRef.current!.style.display = "flex"
+    overlayRef.current?.classList.add('overlayClass');
+    
+   
+    console.log(overlayRef.current);
   };
+
 
   return (
     <>
@@ -56,7 +61,9 @@ const Navigation = () => {
           ))}
         </ul>
 
-        <div className={styles.hamburger}>
+        <div className={styles.hamburger} onClick={(e) => {
+          showOverlay(e);
+        }}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 14 14"
@@ -103,7 +110,28 @@ const Navigation = () => {
         </Link>
       </nav>
 
-      <div ref={overlayRef} className={styles.overlayMenu}></div>
+      <div
+        
+        ref={overlayRef}
+        className={styles.overlayMenu}
+      >
+        <div className={styles.closeMenu} onClick={(e) => {
+          overlayRef.current!.style.display = "none"
+        }}>
+         X
+        </div>
+
+
+     <ul>
+          {navItems.map((item, index) => (
+            <li key={index}>
+              <Link href={item.link}>{item.name}</Link>
+            </li>
+          ))}
+        </ul>
+
+
+      </div>
     </>
   );
 };
