@@ -7,12 +7,9 @@ import Image from "next/image";
 import React from "react";
 
 const Initiatives = () => {
- 
-
   return (
     <Layout>
       <FullWidthSection
-      
         bgColor="purple"
         color="white"
         title="Initiatives"

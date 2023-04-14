@@ -4,6 +4,8 @@
     min-width: 100vw;
     padding:5rem 8rem;
     gap: 40px;
+    justify-content: space-between;
+    align-items: center;
     
 }
 
