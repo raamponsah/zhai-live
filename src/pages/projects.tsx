@@ -4,6 +4,7 @@ import React from "react";
 import { DataObjectType } from "./news/[slug]";
 import StyledSection from "@/components/StyledSection";
 import Image from "next/image";
+import Link from "next/link";
 
 const ProjectsPage = ({data}:{data:any}) => {
   console.log(data)
@@ -28,6 +29,7 @@ const ProjectsPage = ({data}:{data:any}) => {
           hasLink={true}
           link={`projects/${datum.attributes['Slug']}`}
         >
+          <Link href={`projects/${datum.attributes['Slug']}`}>
           <Image
             style={{ borderRadius: "5px" }}
             alt=""
@@ -38,6 +40,7 @@ const ProjectsPage = ({data}:{data:any}) => {
             height={300}
           ></Image>
 
+          </Link>
           
         </StyledSection>
           </div>
