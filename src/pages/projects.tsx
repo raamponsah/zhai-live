@@ -18,14 +18,16 @@ const ProjectsPage = () => {
   );
 };
 
-export const getServerSideProps = async ()=>{
+export const getServerSideProps = async () => {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_ARTICLES_URL}`);
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_STRAPI_API_PROJECTS_URL}`
+    );
     const { data }: { data: DataObjectType[] } = await res.json();
     // Pass data to the page via props
     return { props: { data } };
   } catch (error) {
     console.log(`Error from getServerSideProps: ${error}`);
   }
-}
+};
 export default ProjectsPage;
