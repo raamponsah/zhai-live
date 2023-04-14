@@ -21,7 +21,7 @@ const FounderPage = () => {
           alt=""
           src="/images/founder-.jpeg"
           width={400}
-          height={500}
+          height={550}
         ></Image>
       </StyledSection>
 
