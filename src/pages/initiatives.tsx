@@ -25,7 +25,7 @@ const Initiatives = () => {
         <Image
           style={{ borderRadius: "5px" }}
           alt=""
-          src="/images/alex-radelich-rtCfGTI7nCA-unsplash.jpg"
+          src="/images/3.jpeg"
           width={400}
           height={300}
         ></Image>
