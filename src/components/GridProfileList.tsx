@@ -87,7 +87,7 @@ const profiles = [
     name: "Henry Johnpauls",
     position: "Head - Youth Programme Planning",
     description:
-      "She is a youth ambassador for Zhai. She is a trained social worker and has worked on several NGO projects.",
+      "He is responsible for designing and implementing youth empowerment programs. He brings expertise in program planning and has worked on various NGO projects.",
     src: "/images/henry.jpeg",
   },
 ];
