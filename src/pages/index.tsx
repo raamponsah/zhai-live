@@ -33,7 +33,7 @@ export default function Home() {
           title="Breaking Barriers: Access to Education for All"
           subtitle="Building a Brighter Future: Scholarships for African Students"
           text="Access to Education for All is a ZHAI Foundation initiative aimed at increasing access to quality education across Africa. Through this program, ZHAI Foundation provides support to marginalized communities, including scholarships for deserving students who may not have the financial means to pursue their academic goals. The initiative is focused on breaking down barriers to education, ensuring that all African children have the opportunity to reach their full potential and create a brighter future for themselves and their communities."
-          image="/images/annie-spratt-feU8G7E5ODI-unsplash.jpg"
+          image="/images/bill-wegener-7MD4DR9jbP0-unsplash.jpg"
           direction="row-reverse"
         />
 
