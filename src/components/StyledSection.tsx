@@ -50,7 +50,7 @@ const StyledSection = ({
         <h4 style={{ color }}>{title}</h4>
         <h6 style={{ color }}>{subtitle}</h6>
         <p style={{ color }}>{subphrase}</p>
-        {hasLink && <Link className={styles.link} href={link}>Learn more</Link>}
+        {hasLink && <Link className={styles.link} href={link || ''}>Learn more</Link>}
       </div>
 
       <div className={styles.sidekick}>{children}</div>
