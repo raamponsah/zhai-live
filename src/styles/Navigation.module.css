@@ -8,6 +8,7 @@
 
 a.homeLink{
     text-decoration: none;
+    cursor: pointer;
 }
 .navigation {
     display: flex;
@@ -36,6 +37,13 @@ a.homeLink{
     text-decoration: none;
     text-transform: uppercase;
     color: purple;
+    cursor: pointer;
+}
+
+.navigation .logo a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
 }
 .navigation ul{
     color: white;
