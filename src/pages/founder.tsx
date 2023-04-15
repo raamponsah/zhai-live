@@ -17,11 +17,12 @@ const FounderPage = () => {
         flipped={true}
       >
         <Image
-          style={{ borderRadius: "5px" }}
+          style={{ borderRadius: "5px", marginTop:"50px" }}
           alt=""
           src="/images/founder-.jpeg"
           width={400}
           height={550}
+          
         ></Image>
       </StyledSection>
 
