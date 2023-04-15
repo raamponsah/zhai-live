@@ -44,7 +44,7 @@ const StyledSection = ({
         backgroundRepeat: "no-repeat",
         width: "100%",
         flexDirection: flipped ? "row-reverse" : "row",
-        marginTop:"50px"
+        // marginTop:"50px"
       }}
     >
       <div className={styles.textDisplay}>

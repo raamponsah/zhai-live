@@ -15,7 +15,7 @@ const Layout = ({children}:PropsWithChildren) => {
     <main>
       <Navigation></Navigation>
      
-    <div style={{marginTop:'10vh', paddingTop:'5vh'}}>
+    <div style={{marginTop:'5vh', paddingTop:'5vh'}}>
     {children}
     
 

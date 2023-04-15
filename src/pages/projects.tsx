@@ -7,11 +7,12 @@ import Image from "next/image";
 import Link from "next/link";
 import BgFullWidthSection from "@/components/BgFullWidthSection";
 import Button from "@/components/Button";
+import Layout from "@/layouts/Layout";
 
 const ProjectsPage = ({ data }: { data: any }) => {
   console.log(data);
   return (
-    <>
+    <Layout>
       <Navigation></Navigation>
       <FullWidthSection
       bgColor="purple"
@@ -56,7 +57,7 @@ const ProjectsPage = ({ data }: { data: any }) => {
         >
           <Button title="Learn More &rarr;" />
         </BgFullWidthSection>
-    </>
+    </Layout>
   );
 };
 
