@@ -4,10 +4,11 @@ import StyledSection from "@/components/StyledSection";
 import Image from "next/image";
 import BgFullWidthSection from "@/components/BgFullWidthSection";
 import Button from "@/components/Button";
+import Layout from "@/layouts/Layout";
 
 const FounderPage = () => {
   return (
-    <>
+    <Layout>
       <Navigation></Navigation>
       <StyledSection
         title="ZHUANG ZIHAO BRANDON"
@@ -17,7 +18,7 @@ const FounderPage = () => {
         flipped={true}
       >
         <Image
-          style={{ borderRadius: "5px", marginTop:"50px" }}
+          style={{ borderRadius: "5px"}}
           alt=""
           src="/images/founder-.jpeg"
           width={400}
@@ -36,7 +37,7 @@ const FounderPage = () => {
       >
         <Button title="Learn More &rarr;" />
       </BgFullWidthSection>
-    </>
+    </Layout>
   );
 };
 
