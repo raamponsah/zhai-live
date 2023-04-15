@@ -1,7 +1,7 @@
 import styles from "@/styles/FullWidthSection.module.css";
 import IconTextComponent from "./IconTextComponent";
 import { ReactElement, ReactNode } from "react";
-
+import {motion} from 'framer-motion'
 const FullWidthSection = ({
   title,
   subtitle,
@@ -24,7 +24,10 @@ const FullWidthSection = ({
   color?: string;
 }) => {
   return (
-    <div
+    <motion.div
+    initial={{opacity:0, y:100}}
+      animate={{opacity:1, y:0}}
+      transition={{duration:1}}
       className={styles.section}
       style={{
         backgroundColor: bgColor,
@@ -37,13 +40,23 @@ const FullWidthSection = ({
         // marginTop:"40px"
       }}
     >
-      <div className={styles.textDisplay}>
+      <motion.div 
+      initial={{opacity:0, y:100}}
+      animate={{opacity:1, y:0}}
+      transition={{duration:1}}
+
+      className={styles.textDisplay}>
         <h4 style={{ color }}>{title}</h4>
         <h6 style={{ color }}>{subtitle}</h6>
         <p style={{ color }}>{subphrase}</p>
-      </div>
+      </motion.div>
 
-      <div className={styles.icons}>
+      <motion.div 
+      initial={{opacity:0, y:100}}
+      animate={{opacity:1, y:0}}
+      transition={{delay:1.3,duration:1}}
+      
+      className={styles.icons}>
         {iconSet?.map((iconText, i) => {
           return (
             <IconTextComponent
@@ -54,9 +67,15 @@ const FullWidthSection = ({
             />
           );
         })}
-      </div>
+      </motion.div>
+      <motion.div
+      initial={{opacity:0, y:100}}
+      animate={{opacity:1, y:0}}
+      transition={{delay:1.5,duration:1}}
+      >
       {children}
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

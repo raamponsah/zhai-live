@@ -1,9 +1,7 @@
 import styles from "@/styles/StyledSection.module.css";
 import { ReactElement, ReactNode } from "react";
 import Link from "next/link";
-
-
-
+import { motion } from "framer-motion";
 
 const StyledSection = ({
   title,
@@ -16,7 +14,7 @@ const StyledSection = ({
   children,
   color,
   flipped = false,
-  hasLink=false,
+  hasLink = false,
   link,
 }: {
   title?: string;
@@ -30,7 +28,7 @@ const StyledSection = ({
   color?: string;
   flipped?: boolean;
   hasLink?: boolean;
-  link?:string | null | '';
+  link?: string | null | "";
 }) => {
   return (
     <div
@@ -47,14 +45,30 @@ const StyledSection = ({
         // marginTop:"50px"
       }}
     >
-      <div className={styles.textDisplay}>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1, duration: 1 }}
+        className={styles.textDisplay}
+      >
         <h4 style={{ color }}>{title}</h4>
         <h6 style={{ color }}>{subtitle}</h6>
         <p style={{ color }}>{subphrase}</p>
-        {hasLink && <Link className={styles.link} href={link || ''}>Learn more</Link>}
-      </div>
+        {hasLink && (
+          <Link className={styles.link} href={link || ""}>
+            Learn more
+          </Link>
+        )}
+      </motion.div>
 
-      <div className={styles.sidekick}>{children}</div>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.75, duration: 1 }}
+        className={styles.sidekick}
+      >
+        {children}
+      </motion.div>
     </div>
   );
 };

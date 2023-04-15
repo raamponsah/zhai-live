@@ -21,7 +21,7 @@ const Initiatives = () => {
       ></FullWidthSection>
 
       <StyledSection
-        title="Education"
+        title="Education Support"
         subphrase="The Zhai Foundation initiative on education aims to improve access to quality education for disadvantaged and marginalized communities. It achieves this through scholarship programs, building and renovating educational infrastructure, teacher training, and community outreach. The foundation is committed to empowering individuals and communities to reach their full potential through education."
         flipped={false}
         bgColor="rgb(243, 236, 255)"
@@ -36,7 +36,7 @@ const Initiatives = () => {
       </StyledSection>
 
       <StyledSection
-        title="Health"
+        title="Health Support"
         subphrase="The Zhai Foundation initiative on health aims to improve healthcare access and outcomes for disadvantaged and marginalized communities. The foundation achieves this by investing in healthcare infrastructure, providing healthcare education and training, implementing disease prevention and management programs, and addressing nutrition and food security issues in underserved communities. The foundation is committed to empowering individuals and communities to achieve better health outcomes."
         flipped={true}
         bgColor="white"
