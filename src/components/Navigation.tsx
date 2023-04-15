@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "@/styles/Navigation.module.css";
 import Image from "next/image";
 import { useRef } from "react";
+import { motion } from "framer-motion";
 const navItems = [
   {
     name: "Initiatives",
@@ -35,12 +36,11 @@ const Navigation = () => {
     e.preventDefault();
     overlayRef.current!.style.display = "flex";
     overlayRef.current?.classList.add("overlayClass");
-
-    console.log(overlayRef.current);
   };
 
   return (
-    <>
+    <div>
+      
       <nav className={styles.navigation}>
         <div id={styles.logo}>
           <Link href="/" className={styles.homeLink}>
@@ -114,6 +114,8 @@ const Navigation = () => {
           <span>Donate</span>
         </Link>
       </nav>
+  
+      
 
       <div ref={overlayRef} className={styles.overlayMenu}>
         <div
@@ -133,7 +135,8 @@ const Navigation = () => {
           ))}
         </ul>
       </div>
-    </>
+
+    </div>
   );
 };
 
