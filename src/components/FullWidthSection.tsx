@@ -34,6 +34,7 @@ const FullWidthSection = ({
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         width: "100%",
+        marginTop:"40px"
       }}
     >
       <div className={styles.textDisplay}>

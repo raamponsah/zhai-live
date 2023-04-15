@@ -15,11 +15,13 @@ const Layout = ({children}:PropsWithChildren) => {
     <main>
       <Navigation></Navigation>
      
+    <div style={{marginTop:'10vh', paddingTop:'5vh'}}>
     {children}
     
 
 
     <FooterNav/>
+    </div>
     </main>
 
   </>

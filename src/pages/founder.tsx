@@ -16,7 +16,7 @@ const FounderPage = () => {
         bgColor="rgb(229 185 236 / 40%)"
         flipped={true}
       >
-         <Image
+        <Image
           style={{ borderRadius: "5px" }}
           alt=""
           src="/images/founder-.jpeg"

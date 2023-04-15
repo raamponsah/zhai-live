@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 
 }
 
@@ -15,6 +16,10 @@ a.homeLink{
     background-color:var(--main);
     padding: 20px 10px;
     box-shadow: 2px ;
+    position: fixed;
+    min-width: 100%;
+    z-index: 1000;
+    top: 0;
 }
 
 .navigation #logo{
