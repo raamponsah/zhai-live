@@ -18,6 +18,21 @@ import Button from "@/components/Button";
 export default function Home() {
   return (
     <Layout>
+        <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+        <meta
+          name="description"
+          content="Zhai Foundation is a non-profit organization committed to improving the lives of disadvantaged and marginalized communities in Africa. Our causes include education, health, widowhood support, and orphanage support."
+        />
+        <meta
+          name="keywords"
+          content="Zhai Foundation, non-profit, Africa, education, health, widowhood support, orphanage support"
+        ></meta>
+          <meta name="author" content="Zhai Foundation"/>
+        <title>Zhai Foundation | Empowering Communities in Africa</title>
+      </Head>
       <main>
         <HomeBanner />
 

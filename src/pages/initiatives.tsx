@@ -3,12 +3,16 @@ import Button from "@/components/Button";
 import FullWidthSection from "@/components/FullWidthSection";
 import StyledSection from "@/components/StyledSection";
 import Layout from "@/layouts/Layout";
+import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 
 const Initiatives = () => {
   return (
     <Layout>
+      <Head>
+      <title>Initiatives | Zhai Foundation </title>
+      </Head>
       <FullWidthSection
         bgColor="purple"
         color="white"

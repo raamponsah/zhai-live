@@ -5,10 +5,14 @@ import Image from "next/image";
 import BgFullWidthSection from "@/components/BgFullWidthSection";
 import Button from "@/components/Button";
 import Layout from "@/layouts/Layout";
+import Head from "next/head";
 
 const FounderPage = () => {
   return (
     <Layout>
+        <Head>
+      <title>Founder | Zhai Foundation </title>
+      </Head>
       <Navigation></Navigation>
       <StyledSection
         title="ZHUANG ZIHAO BRANDON"

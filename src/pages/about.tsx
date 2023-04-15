@@ -8,10 +8,14 @@ import React from "react";
 import { FaTheaterMasks } from "react-icons/fa";
 import { HiAcademicCap } from "react-icons/hi";
 import { MdHealthAndSafety } from "react-icons/md";
+import Head from "next/head";
 
 const About = () => {
   return (
     <Layout>
+        <Head>
+      <title>About | Zhai Foundation </title>
+      </Head>
       <FullWidthSection
         bgColor="purple"
         color="white"

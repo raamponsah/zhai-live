@@ -8,11 +8,15 @@ import Link from "next/link";
 import BgFullWidthSection from "@/components/BgFullWidthSection";
 import Button from "@/components/Button";
 import Layout from "@/layouts/Layout";
+import Head from "next/head";
 
 const ProjectsPage = ({ data }: { data: any }) => {
-  console.log(data);
+
   return (
     <Layout>
+        <Head>
+      <title>Projects | Zhai Foundation </title>
+      </Head>
       <Navigation></Navigation>
       <FullWidthSection
       bgColor="purple"

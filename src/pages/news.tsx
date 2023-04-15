@@ -5,11 +5,15 @@ import BgFullWidthSection from "@/components/BgFullWidthSection";
 import GridNewsList from "@/components/GridNewsList";
 import Layout from "@/layouts/Layout";
 import { DataObjectType } from "./news/[slug]";
+import Head from "next/head";
 
 const News = ({ data }: { data: DataObjectType[] }) => {
 
   return (
     <Layout>
+        <Head>
+      <title>News | Zhai Foundation </title>
+      </Head>
       <FullWidthSection
         title="News"
         subtitle="Updates and Articles about ZHAI"

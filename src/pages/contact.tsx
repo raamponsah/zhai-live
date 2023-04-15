@@ -2,10 +2,14 @@ import ContactComponent from "@/components/ContactComponent";
 import FullWidthSection from "@/components/FullWidthSection";
 import MapComponent from "@/components/MapComponent";
 import Layout from "@/layouts/Layout";
+import Head from "next/head";
 
 const Contact = () => {
   return (
     <Layout>
+        <Head>
+      <title>Contact | Zhai Foundation </title>
+      </Head>
       <FullWidthSection
         title="Contact"
         bgColor="purple"
