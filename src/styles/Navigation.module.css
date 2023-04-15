@@ -73,7 +73,7 @@ a.homeLink{
 .navigation ul li a {
     text-decoration: none;
     cursor: pointer;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 /* .navigation ul li a:hover {
