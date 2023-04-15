@@ -64,7 +64,8 @@ a.homeLink{
 
 .navigation ul li a {
     text-decoration: none;
-    color:black
+    color:black;
+    cursor: pointer;
 }
 
 /* .navigation ul li a:hover {
