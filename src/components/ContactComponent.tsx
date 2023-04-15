@@ -13,7 +13,7 @@ const ContactComponent = () => {
               <input type="hidden" name="form-name" value="contact" />
 
     
-       <h1>Write to us or donate</h1>
+       <h1>Write to us</h1>
     
         <div>
           <label htmlFor="">Full Name</label>
