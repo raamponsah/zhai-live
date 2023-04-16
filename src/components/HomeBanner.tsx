@@ -13,18 +13,7 @@ const HomeBanner = () => {
         </p>
         <Link
           href="/about"
-          style={{
-            color: "white",
-            padding: "10px 30px",
-            textDecoration: "none",
-            fontWeight: 50,
-            border:'1px solid white',
-            borderRadius:'20px',
-            marginTop:'20px',
-
-
-
-          }}
+          className={styles.button}
         >
           Learn more
         </Link>
@@ -32,7 +21,7 @@ const HomeBanner = () => {
 
       <div className={styles.homeBannerImage}>
         <Image
-          src="/images/zach-vessels-EkHXa6b8vCY-unsplash.jpg"
+          src="/images/emmanuel-ikwuegbu-VC6MGt9ZoBA-unsplash.jpg"
           alt="home-banner"
           fill
           className={styles.image}
