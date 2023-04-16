@@ -15,7 +15,7 @@ const HomeBanner = () => {
           href="/about"
           className={styles.button}
         >
-          Learn more
+          Learn more &rarr;
         </Link>
       </div>
 
