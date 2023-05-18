@@ -21,7 +21,7 @@ const About = () => {
         color="white"
         title="ZHAI Foundation"
         subtitle="Empowering Africa's Future"
-        subphrase="The Foundation is a beacon of hope and progress in the world of philanthropy. With a steadfast commitment to empowering underserved communities and promoting sustainable development, Zhai Foundation is a force to be reckoned with. Through innovative programs and strategic partnerships, they are making a tangible difference in the lives of people around the globe. Their unwavering dedication to social justice and environmental stewardship is an inspiration to us all. Zhai Foundation is truly a game-changer, and their impact will be felt for generations to come."
+        subphrase="Our mission is to fight for poverty, gender equality, and sustainable development in Africa. We provide food, shelter, education, and medical care to vulnerable groups in the local communities in Africa."
       ></FullWidthSection>
 
       <FullWidthSection
