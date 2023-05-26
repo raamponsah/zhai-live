@@ -26,7 +26,7 @@ export type DataObjectType = {
 export const getStaticPaths = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_ARTICLES_URL}`);
   const { data }: { data: DataObjectType[] } = await res.json();
-  const paths = data.map((d: DataObjectType) => {
+  const paths = data?.map((d: DataObjectType) => {
     return {
       params: {
         slug: d.attributes.Slug,
