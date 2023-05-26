@@ -29,7 +29,7 @@ export const getStaticPaths = async () => {
   const paths = data?.map((d: DataObjectType) => {
     return {
       params: {
-        slug: d.attributes.Slug,
+        slug: d?.attributes?.Slug,
       },
     };
   });
