@@ -41,7 +41,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
   console.log(`Params => ${params?.slug}`);
   const slug = params?.slug;
   const res = await fetch(
-    `https://zhai-strapi-cms-production.up.railway.app/api/articles?filters[Slug][$eq]=${slug}`
+    `https://zhai-cms-live.up.railway.app/api/articles?filters[Slug][$eq]=${slug}`
   );
   const project: DataObjectType = await res.json();
   return {
