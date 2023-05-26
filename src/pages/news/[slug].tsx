@@ -70,7 +70,7 @@ const Project = ({ project }: { project: any }) => {
         width={800}
         height={400}
         alt={data[0]?.attributes?.Title}
-        loading="lazy"
+       
       />
 
       <FullWidthSection bgColor="white">
