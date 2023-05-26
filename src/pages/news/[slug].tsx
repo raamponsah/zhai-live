@@ -28,12 +28,16 @@ export const getStaticPaths = async () => {
   const { data }: { data: DataObjectType[] } = await res.json();
   const paths = data?.map((d: DataObjectType) => {
     return {
-      paths: [{ params: { slug: d?.attributes?.Slug } }],
-      fallback: false,
+      params: {
+        slug: d?.attributes?.Slug,
+      },
     };
   });
 
-  return { paths, fallback: false };
+  return {
+    paths: paths,
+    fallback: false,
+  };
 };
 
 export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
