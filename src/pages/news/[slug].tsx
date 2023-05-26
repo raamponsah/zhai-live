@@ -25,19 +25,21 @@ export type DataObjectType = {
 
 export const getStaticPaths = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_ARTICLES_URL}`);
-  const { data }: { data: DataObjectType[] } = await res.json();
-  const paths = data?.map((d: DataObjectType) => {
-    return {
-      params: {
-        slug: `${d?.attributes?.Slug}`,
-      },
-    };
-  });
+  const { data }: { data: any[] } = await res.json();
 
-  return {
-    paths: paths,
-    fallback: false,
-  };
+    return {
+     paths:  data?.map((d: any) => {
+        return {
+          params: {
+            slug: d?.attributes?.Slug,
+          },
+        }
+      }),
+      fallback: false
+    };
+ 
+
+  
 };
 
 export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
