@@ -65,13 +65,13 @@ const Project = ({ project }: { project: any }) => {
         title={data[0]?.attributes?.Title}
       ></FullWidthSection>
 
-      {/* <Image
+      <Image
         src={data[0]?.attributes["Cover"]?.data?.attributes?.url}
         width={800}
         height={400}
         alt={data[0]?.attributes?.Title}
         loading="lazy"
-      /> */}
+      />
 
       <FullWidthSection bgColor="white">
         <div
