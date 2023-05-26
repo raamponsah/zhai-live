@@ -28,9 +28,8 @@ export const getStaticPaths = async () => {
   const { data }: { data: DataObjectType[] } = await res.json();
   const paths = data?.map((d: DataObjectType) => {
     return {
-      params: {
-        slug: d?.attributes?.Slug,
-      },
+      paths: [{ params: { slug: d?.attributes?.Slug } }],
+      fallback: false,
     };
   });
 
@@ -81,7 +80,6 @@ const Project = ({ project }: { project: any }) => {
           }}
         ></div>
       </FullWidthSection>
-
     </Layout>
   );
 };
