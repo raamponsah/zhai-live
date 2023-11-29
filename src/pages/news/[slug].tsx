@@ -6,22 +6,22 @@ import { GetStaticPropsContext } from "next";
 import Image from "next/image";
 import React from "react";
 import DOMPurify from "isomorphic-dompurify";
-export type DataObjectType = {
-  id: number;
-  attributes: {
-    publishedAt: string;
-    Title: string;
-    Content: string;
-    Slug: string;
-    Cover: {
-      data: {
-        id: number;
-        attributes: { url: string; provider_metadata: { public_id: string } };
-      };
-    };
-    Excerpt?: string;
-  };
-};
+// export type DataObjectType = {
+//   id: number;
+//   attributes: {
+//     publishedAt: string;
+//     Title: string;
+//     Content: string;
+//     Slug: string;
+//     Cover: {
+//       data: {
+//         id: number;
+//         attributes: { url: string; provider_metadata: { public_id: string } };
+//       };
+//     };
+//     Excerpt?: string;
+//   };
+// };
 
 export const getStaticPaths = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_ARTICLES_URL}`);
@@ -48,7 +48,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
   const res = await fetch(
     `https://zhai-cms-live.up.railway.app/api/articles?filters[Slug][$eq]=${slug}`
   );
-  const project: DataObjectType = await res.json();
+  const project: any = await res.json();
   return {
     props: { project },
   };
