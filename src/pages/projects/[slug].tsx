@@ -3,7 +3,6 @@ import Layout from "@/layouts/Layout";
 
 import { marked } from "marked";
 import { GetStaticPropsContext } from "next";
-import Image from "next/image";
 import React from "react";
 import DOMPurify from "isomorphic-dompurify";
 // export type DataObjectType = {

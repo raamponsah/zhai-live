@@ -51,7 +51,9 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
   const project: any = await res.json();
   return {
     props: { project },
-  };
+    fallback: false
+
+  }
 };
 
 const Project = ({ project }: { project: any }) => {
