@@ -1,7 +1,7 @@
 import FullWidthSection from "@/components/FullWidthSection";
 import Navigation from "@/components/Navigation";
 import React from "react";
-import { DataObjectType } from "./news/[slug]";
+// import { DataObjectType } from "./news/[slug]";
 import StyledSection from "@/components/StyledSection";
 import Image from "next/image";
 import Link from "next/link";
@@ -70,7 +70,7 @@ export const getServerSideProps = async () => {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_STRAPI_API_PROJECTS_URL}`
     );
-    const { data }: { data: DataObjectType[] } = await res.json();
+    const { data }: { data: any[] } = await res.json();
     // Pass data to the page via props
     console.log(data);
     return { props: { data } };

@@ -4,10 +4,10 @@ import BgFullWidthSection from "@/components/BgFullWidthSection";
 
 import GridNewsList from "@/components/GridNewsList";
 import Layout from "@/layouts/Layout";
-import { DataObjectType } from "./news/[slug]";
+// import { DataObjectType } from "./news/[slug]";
 import Head from "next/head";
 
-const News = ({ data }: { data: DataObjectType[] }) => {
+const News = ({ data }: { data: any[] }) => {
 
   return (
     <Layout>
@@ -54,7 +54,7 @@ export default News;
 export async function getServerSideProps() {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_ARTICLES_URL}`);
-    const { data }: { data: DataObjectType[] } = await res.json();
+    const { data }: { data: any[] } = await res.json();
     // Pass data to the page via props
     return { props: { data } };
   } catch (error) {
