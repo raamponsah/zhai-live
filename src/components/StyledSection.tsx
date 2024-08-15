@@ -51,7 +51,7 @@ const StyledSection = ({
         transition={{ delay: 1, duration: 1 }}
         className={styles.textDisplay}
       >
-        <h4 style={{ color }}>{title}</h4>
+        <h4 style={{ color }}><Link href={link || ""} style={{textDecoration:"none", color:"purple", fontSize:"36px"}}>{title}</Link></h4>
         <h6 style={{ color }}>{subtitle}</h6>
         <p style={{ color }}>{subphrase}</p>
         {hasLink && (

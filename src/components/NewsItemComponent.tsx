@@ -12,25 +12,35 @@ const NewsItemComponent = (article: any) => {
   return (
     <div className={styles.newsItem}>
       <div className={styles.imageContainer}>
-        <Image
+        <Link
+          href={`/news/${article.attributes["Title"]
+            .split(" ")
+            .join("-")
+            .toLocaleLowerCase()}`}
+        ><Image
         width={650}
         height={400}
           src={article.attributes["Cover"]?.data?.attributes?.url}
           alt={article.attributes["Title"]}
           style={{borderRadius:'20px', marginBottom:'15px', top:0, left:0}}
 
-        />
+        /></Link>
         </div>
         
         <div>
 
         <h3>{article.attributes["Title"]}</h3>
-        <h5 style={{ fontStyle: "italic" }}>
+          <Link
+            href={`/news/${article.attributes["Title"]
+              .split(" ")
+              .join("-")
+              .toLocaleLowerCase()}`}
+          ><h5 style={{ fontStyle: "italic" }}>
           {tsToUtcFormat(
             Date.parse(`${article.attributes.publishedAt}`),
             "D d M Y"
           )}
-        </h5>
+          </h5></Link>
         {/* <h5>3rd May 2023 | Jeremy Phelps</h5> */}
 
         <div
