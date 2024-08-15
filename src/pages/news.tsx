@@ -1,29 +1,26 @@
 import Button from "@/components/Button";
 import FullWidthSection from "@/components/FullWidthSection";
 import BgFullWidthSection from "@/components/BgFullWidthSection";
-
 import GridNewsList from "@/components/GridNewsList";
 import Layout from "@/layouts/Layout";
-// import { DataObjectType } from "./news/[slug]";
 import Head from "next/head";
 
 const News = ({ data }: { data: any[] }) => {
-
   return (
     <Layout>
-        <Head>
-      <title>News | Zhai Foundation </title>
+      <Head>
+        <title>News | Zhai Foundation</title>
       </Head>
       <FullWidthSection
         title="News"
         subtitle="Updates and Articles about ZHAI"
         bgColor="purple"
         color="white"
-      ></FullWidthSection>
+      />
 
       <FullWidthSection bgColor="white">
         <section>
-          <GridNewsList list={data}></GridNewsList>
+          <GridNewsList list={data} />
         </section>
       </FullWidthSection>
 
@@ -43,21 +40,13 @@ const News = ({ data }: { data: any[] }) => {
 
 export default News;
 
-// export async function getServerSideProps() {
-//   // Fetch data from external API
-//   const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}`);
-//   const { data }: { data: DataObjectType[] } = await res.json();
-//   // Pass data to the page via props
-//   return { props: { data } };
-// }
-
-export async function getServerSideProps() {
+export const getServerSideProps = async () => {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_ARTICLES_URL}`);
     const { data }: { data: any[] } = await res.json();
-    // Pass data to the page via props
     return { props: { data } };
   } catch (error) {
-    console.log(`Error from getServerSideProps: ${error}`);
+    console.error(`Error from getServerSideProps: ${error}`);
+    return { props: { data: [] } };
   }
-}
+};
