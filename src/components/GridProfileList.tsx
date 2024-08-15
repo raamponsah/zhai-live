@@ -17,6 +17,13 @@ const profiles = [
       "Xi, is the leads the economical front for the various ZHAI projects and programs in China.",
     src: "/images/sandy.jpeg",
   },
+  {
+    name: "LU Zhiqi",
+    position: "Member -China        ",
+    description:
+      "Lu, is a core founding member of ZHAI foundation and she contributes immensely on strategic projects in China.",
+    src: "/images/lu-zhiqi.jpg",
+  },
 
   {
     name: "John-Paul Azaonoo",
