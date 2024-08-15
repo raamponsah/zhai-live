@@ -24,8 +24,10 @@ const Contact = () => {
           gap: 40,
         }}
       >
-        <ContactComponent></ContactComponent>
-        <MapComponent />
+        <div style={{display: "flex", justifyContent: "space-between", gap:"40px", marginTop:"40px"}}>
+          <ContactComponent></ContactComponent>
+          <MapComponent />
+        </div>
       </section>
     </Layout>
   );
